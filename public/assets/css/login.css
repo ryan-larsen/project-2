@@ -1,0 +1,104 @@
+body {
+    font-family: Trade Winds
+}
+
+
+.login-form{
+    background: rgba(0, 0, 0, 0.6);
+    grid-row: 1 / span 1;
+    width: 40%;
+    height: 450px;
+    margin: 10% auto;
+    position: relative;
+    grid-gap: 30px;
+        border-radius: 25px;
+     
+  
+}
+
+.inner-form{
+    padding-left: 25px;
+}
+
+.login-input{
+    font-size: x-large;
+    color: orangered;
+    border-radius: 25px;
+    border-color: orangered;
+    opacity: .9;
+    padding-left: 10px;
+}
+
+.password-input {
+    margin-top: 2px;
+    font-size: x-large;
+    color: orangered;
+    border-radius: 25px;
+    border-color: orangered;
+    opacity: .9;
+    padding-left: 10px;
+    width: 59;
+    }
+
+input.password-input{
+    margin-left: 1px;
+
+}
+
+.log-in-button{
+     margin-top: 40px;
+     background-color: white;
+     border-radius: 25px;
+     border: 2px solid orangered;
+     opacity: 0.9;
+     padding: 7px;
+     width: 100px;
+     margin-left: 56px;
+     width: 400px;
+
+}
+
+.log-in-button:hover{
+    background-color: orangered;
+    cursor: pointer;
+    color: white;
+}
+
+.register-button{
+     margin-top: 2px;
+     background-color: white;
+     border-radius: 25px;
+     border: 2px solid orangered;
+     opacity: 0.9;
+     padding: 7px;
+     width: 100px;
+     margin-left: 56px;
+     margin-top: 5px;
+     width: 400px;
+}
+
+.register-button:hover{
+     background-color: orangered;
+     cursor: pointer;
+     color: white;
+
+}
+
+.username{
+    color: orangered;
+    font-size: x-large;
+    padding-top: 4%;
+    padding-left: 10px;
+}
+
+
+
+.food-fight-header{
+    color: orangered;
+    text-align: center;
+    padding-top: 10%
+}
+
+.second-header{
+    color: orangered
+}
