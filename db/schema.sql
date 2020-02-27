@@ -1,14 +1,16 @@
-DROP DATABASE IF EXISTS foodFight_db;
-CREATE database foodFight_db;
 
-USE foodFight_db;
+DROP DATABASE userDb;
 
-CREATE TABLE mealoptions(
-    id INT NOT NULL AUTO_INCREMENT,
-    member_id VARCHAR (300) NOT NULL,
-    meals VARCHAR NOT NULL,
-    created_at DECIMAL NOT NULL,
-    votes INT AUTO_INCREMENT
-    PRIMARY KEY(id)
-    
-);
+USE userDb;
+
+CREATE DATABASE userDb;
+
+CREATE TABLE users
+(
+	id INT NOT NULL AUTO_INCREMENT,
+	email VARCHAR( 255 ) NOT NULL,
+	password VARCHAR( 255 ) NOT NULL,
+  	createdAt  DATETIME,
+    updatedAt DATETIME,
+  	PRIMARY KEY( id )
+)
