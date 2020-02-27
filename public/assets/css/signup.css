@@ -6,7 +6,7 @@ body {
 .login-form{
     background: rgba(0, 0, 0, 0.6);
     grid-row: 1 / span 1;
-    width: 40%;
+    width: 42%;
     height: 450px;
     margin: 10% auto;
     position: relative;
@@ -65,7 +65,7 @@ input.password-input{
 }
 
 .signup-button{
-     margin-top: 2px;
+     margin-top: 10px;
      background-color: white;
      border-radius: 25px;
      border: 2px solid orangered;
@@ -73,7 +73,7 @@ input.password-input{
      padding: 7px;
      width: 100px;
      margin-left: 56px;
-     margin-top: 5px;
+     margin-top: 55px;
      width: 400px;
 }
 
@@ -81,6 +81,7 @@ input.password-input{
      background-color: orangered;
      cursor: pointer;
      color: white;
+
 }
 
 .username{
@@ -99,9 +100,5 @@ input.password-input{
 }
 
 .second-header{
-    color: orangered
-}
-
-.signup-div{
-    margin-top: 10px;
+    color: orangered;
 }
