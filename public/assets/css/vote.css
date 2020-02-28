@@ -7,38 +7,12 @@ body {
 
 }
 
-a:hover {
-  text-decoration: none;
-}
-
-input:focus,
-select:focus {
-  outline: none;
-}
-
 /* Main Grid Styling Below */
 #main-grid {
   display: grid;
   grid-auto-rows: 3fr 1fr 3fr;
   min-height: calc(100vh - 50px);
 }
-
-
-#meal-div {
-  grid-row: 1 / span 1;
-  background: rgba(0, 0, 0, 0.6);
-  width: 1000px;
-  height: 450px;
-  margin: 35px auto;
-  display: none;
-  grid-auto-flow: column;
-  overflow: scroll;
-  position: relative;
-  grid-gap: 30px;
-  border-left: solid rgba(0, 0, 0, 0) 15px;
-  border-right: solid rgba(0, 0, 0, 0) 15px;
-}
-
 
 
 /* User Logged Out & Signed In Styling  */
@@ -56,118 +30,6 @@ select:focus {
 }
 
 
-
-
-
-#foodfight-intro-logo {
-  font-size: 120px;
-  padding: 10px;
-  color: rgb(5, 5, 5);
-  text-shadow: 5px -2px 10px black, 2px 2px 10px black;
-  display: flex;
-  justify-content: center;
-}
-
-#foodfight-logo {
-  font-size: 85px;
-  padding: 10px;
-  color: rgb(3, 3, 3);
-  text-shadow: 5px -2px 10px black, 2px 2px 10px black;
-  display: none;
-}
-
-.form-control {
-  width: 200px;
-  height: 55px;
-  margin: auto 10px;
-  font-size: 25px;
-  font-weight: bold;
-  text-align: center;
-  padding-left: 32px;
-  color: #495057;
-}
-
-.form-control:focus {
-  box-shadow: none;
-  border-color: initial;
-}
-
-#user-input::placeholder {
-  color: rgb(196, 195, 195);
-}
-
-.btn {
-  height: 55px;
-  font-size: 25px;
-  text-align: center;
-  font-weight: bold;
-  margin-left: -15px;
-  background: #495057;
-  color: white;
-  border-radius: inherit;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
-}
-
-.btn:focus {
-  color: white;
-  background: #495057;
-  border-color: none;
-  outline: initial;
-  box-shadow: none;
-}
-
-#error-message {
-  margin: 0;
-  position: absolute;
-  bottom: 19px;
-  margin-left: 103px;
-  font-size: 11px;
-  color: white;
-  padding: 3px 10px;
-  border-radius: 5px;
-  background: darkred;
-  display: none;
-}
-
-#foodfight-intro {
-  color:black;
-  font-style: italic;
-  font-size: 50px;
-  text-align: center;
-  margin-top: -15px;
-  visibility: hidden;
-}
-
-
-
-.fa-utensils {
-  color: white;
-  font-size: 145px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-top: 60px;
-  padding-bottom: 34px;
-}
-
-
-
-.noResultsFound {
-  color: white;
-  font-family: "Quicksand", sans-serif;
-  font-weight: bold;
-  text-align: center;
-  align-self: center;
-  font-size: 35px;
-}
-
-/* Flip Animation Styling */
-.parent-card {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-}
 
 .flip-card {
   width: 100%;
@@ -215,133 +77,6 @@ footer {
   border-top: solid rgb(213, 53, 62, 0.8) 5px;
 }
 
-/* Styling for Current Plans HTML Page*/
-#templateMovie,
-#templateRest {
-  display: none;
-}
-
-#selections-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  width: 90%;
-  margin: auto;
-}
-
-#favCard {
-  display: grid;
-  grid-auto-flow: column;
-  position: relative;
-  justify-content: center;
-  background-color: rgba(0, 0, 0, 0.6);
-  min-height: 400px;
-  text-align: center;
-  padding: 40px;
-  grid-gap: 30px;
-}
-
-
-
-#foodfight-selections {
-  margin-top: 30px;
-}
-
-.cardText {
-  width: 90%;
-  margin: auto;
-  padding-left: 0 !important;
-  color: black;
-  font-size: 23px;
-  padding: 10px;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-}
-
-#bottomCardText {
-  margin-top: 25px;
-}
-
-#timeText,
-#placeText,
-#dateText {
-  margin: 0;
-  padding: 10px;
-  font-weight: bold;
-  font-size: 22px;
-}
-
-.friendList {
-  width: 160px;
-  height: 40px;
-  border: none;
-}
-
-#date {
-  width: 200px;
-  height: 40px;
-  text-align: center;
-  border-radius: 10px;
-  border: none;
-  padding: 10px;
-}
-
-#time {
-  width: 130px;
-  height: 40px;
-  border-radius: 10px;
-  border: none;
-  padding: 10px;
-  text-align: center;
-}
-
-#address {
-  width: 250px;
-  height: 40px;
-  border-radius: 10px;
-  border: none;
-  padding: 10px;
-}
-
-.mini-foodfight-logo {
-  color: rgb(255, 246, 142);
-  text-shadow: 5px -2px 10px black, 2px 2px 10px black;
-  font-size: 30px;
-  margin-right: 11px;
-}
-
-#clearFavCard {
-  visibility: hidden;
-  position: absolute;
-  bottom: 15px;
-  left: 15px;
-  font-size: 35px;
-  color: white;
-}
-
-.invitationForm {
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-size: 17px;
-  background: rgb(0, 0, 0, 0.6);
-  position: relative;
-  margin-left: 20px;
-}
-
-
-
-
-
-
-
-
-
-
-
-/* Styling for foodfight vote Page */
 
 #voteLogo {
   color: rgb(255, 246, 142);
@@ -361,58 +96,13 @@ footer {
   align-items: center;
 }
 
-#voteDiv {
-  margin: auto;
-  width: 900px;
-  background: rgb(0, 0, 0, 0.6);
-  padding: 30px;
-  border-radius: 10px;
-}
-
-.questions {
-  color: white;
-}
-
-.answers {
-  margin: 0;
-  padding: 15px;
-  font-weight: lighter;
-  color: black;
-  letter-spacing: 1px;
-}
-
-.accordion {
-  cursor: pointer;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none !important;
-  transition: 0.4s;
-  font-weight: bold;
-  background: rgb(255, 255, 255, 0.5);
-  padding: 10px;
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: flex-end;
-  align-items: baseline;
-}
-
-.active,
-.accordion:hover {
-  background: rgb(220, 20, 60);
-}
-
 .panel {
   padding: 0 18px;
   display: none;
   background-color: white;
   overflow: hidden;
 }
-.accordion:after {
-  content: "\02795"; /* Unicode character for "plus" sign (+) */
-  font-size: 16px;
-  margin-right: 10px;
-}
+
 
 
 
