@@ -8,9 +8,9 @@ module.exports = function (app) {
   app.get('/', function (req, res) {
     // If the user already has an account send them to the voting page
     if (req.user) {
-      res.redirect('/vote')
+      res.redirect('/login')
     }
-    res.sendFile(path.join(__dirname, '../public/signup.html'))
+    res.sendFile(path.join(__dirname, '../public/assets/html/login.html'))
   })
 
   app.get('/login', function (req, res) {

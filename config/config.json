@@ -1,19 +1,9 @@
 {
-    "development": {
-      "username": "root",
-      "dialect": "mysql"
-    },
-    "test": {
-      "username": "root",
-      "password": "Penguinpoo!7",
-      "database": "userDB",
-      "host": "localhost",
-      "dialect": "mysql"
-    },
-    "production": {
-      "username": "root",
-      "password": null,
-      "database": "database_production",
-      "host": "127.0.0.1"
-    }
+  "development": {
+    "username": "root",
+    "password": "Penguinpoo!7",
+    "database": "userDb",
+    "host": "localhost",
+    "dialect": "mysql"
   }
+}
