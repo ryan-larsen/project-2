@@ -72,7 +72,7 @@ input.password-input{
      opacity: 0.9;
      padding: 7px;
      width: 100px;
-     margin-left: 56px;
+     margin-left: 68px;
      margin-top: 55px;
      width: 400px;
 }
@@ -96,9 +96,27 @@ input.password-input{
 .food-fight-header{
     color: orangered;
     text-align: center;
-    padding-top: 10%
+    padding-top: 6%
 }
 
 .second-header{
     color: orangered;
+}
+
+.email{
+        color: orangered;
+    font-size: x-large;
+    padding-top: 4%;
+    padding-left: 10px;
+}
+
+.email-input{
+    font-size: x-large;
+    color: orangered;
+    border-radius: 25px;
+    border-color: orangered;
+    opacity: .9;
+    padding-left: 10px;
+    width: 59;
+    margin-left: 50px;
 }
