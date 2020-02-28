@@ -56,6 +56,7 @@ input.password-input{
      width: 100px;
      margin-left: 56px;
      width: 400px;
+     margin-bottom: 20px;
 
 }
 
@@ -72,10 +73,12 @@ input.password-input{
      border: 2px solid orangered;
      opacity: 0.9;
      padding: 7px;
-     width: 100px;
-     margin-left: 56px;
+     margin-left: 58px;
      margin-top: 5px;
-     width: 400px;
+     color: black;
+     padding-left: 167px;
+     padding-right: 167px;
+     
 }
 
 .signup-button:hover{

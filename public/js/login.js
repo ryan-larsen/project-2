@@ -41,12 +41,7 @@ $(document).ready(function () {
 })
 
 
-// sign up button //doesnt work as of now
-signUpButton.on('click', (event)
-).then(function(){
-  window.location.replace('../public/assets/html/signup.html')
-})
 
-$('#signup-button').onClick(function(){
-  window.location.href = '../public/assets/html/signup.html';
-})
+
+
+
