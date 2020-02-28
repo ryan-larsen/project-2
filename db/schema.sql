@@ -8,9 +8,9 @@ CREATE DATABASE userDb;
 CREATE TABLE users
 (
 	id INT NOT NULL AUTO_INCREMENT,
-	email VARCHAR( 255 ) NOT NULL,
-	password VARCHAR( 255 ) NOT NULL,
+	email VARCHAR(255) NOT NULL,
+	password VARCHAR(255) NOT NULL,
   	createdAt  DATETIME,
     updatedAt DATETIME,
-  	PRIMARY KEY( id )
+  	PRIMARY KEY(id)
 )
