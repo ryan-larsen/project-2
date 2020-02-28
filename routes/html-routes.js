@@ -6,19 +6,19 @@ const isAuthenticated = require('../config/middleware/isAuthenticated')
 
 module.exports = function (app) {
   app.get('/', function (req, res) {
-    // If the user already has an account send them to the voting page
+    // If the user already has an account send them to the login page
     if (req.user) {
       res.redirect('/login')
     }
     res.sendFile(path.join(__dirname, '../public/assets/html/login.html'))
   })
 
-  app.get('/login', function (req, res) {
-    // If the user already has an account send them to the voting page
+  app.get('/signup', function (req, res) {
+    // If the user already has an account send them to the  page
     if (req.user) {
       res.redirect('/vote')
     }
-    res.sendFile(path.join(__dirname, '../public/login.html'))
+    res.sendFile(path.join(__dirname, '../public/assets/html/signup.html'))
   })
 
   // Here we've add our isAuthenticated middleware to this route.
