@@ -33,13 +33,21 @@ body {
 .password-input {
     margin-top: 10px;
     font-size: x-large;
-    color: orangered;
     border-radius: 25px;
     border-color: orangered;
     opacity: .9;
     padding-left: 10px;
     width: 59;
+    color: orangered;
+    margin-left: 20px;
     }
+
+ .password{
+       color:  rgb(255, 246, 142);
+    font-size: x-large;
+    padding-top: 2%;
+    padding-left: 10px;
+ }
 
 input.password-input{
     margin-left: 1px;
@@ -57,13 +65,15 @@ input.password-input{
      margin-left: 56px;
      width: 400px;
      margin-bottom: 20px;
-
+     color: orangered
 }
 
 .log-in-button:hover{
     background-color: orangered;
     cursor: pointer;
-    color: white;
+    color:  rgb(255, 246, 142);
+              border: 2px solid rgb(255, 246, 142);;
+
 }
 
 .signup-button{
@@ -75,7 +85,7 @@ input.password-input{
      padding: 7px;
      margin-left: 58px;
      margin-top: 5px;
-     color: black;
+     color: orangered;
      padding-left: 167px;
      padding-right: 167px;
      
@@ -84,11 +94,13 @@ input.password-input{
 .signup-button:hover{
      background-color: orangered;
      cursor: pointer;
-     color: white;
+     color:  rgb(255, 246, 142);
+          border: 2px solid rgb(255, 246, 142);;
+
 }
 
 .username{
-    color: orangered;
+  color:  rgb(255, 246, 142);
     font-size: x-large;
     padding-top: 4%;
     padding-left: 10px;
@@ -97,13 +109,13 @@ input.password-input{
 
 
 .food-fight-header{
-    color: orangered;
-    text-align: center;
-    padding-top: 8%
+  color:  rgb(255, 246, 142);
+  text-align: center;
+  padding-top: 8%
 }
 
 .second-header{
-    color: orangered
+  color:  rgb(255, 246, 142);
 }
 
 .signup-div{

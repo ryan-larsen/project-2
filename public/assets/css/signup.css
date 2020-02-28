@@ -32,8 +32,8 @@ body {
 .password-input {
     margin-top: 10px;
     font-size: x-large;
-    color: orangered;
-    border-radius: 25px;
+ color:  rgb(255, 246, 142);
+     border-radius: 25px;
     border-color: orangered;
     opacity: .9;
     padding-left: 10px;
@@ -42,7 +42,7 @@ body {
 
 input.password-input{
     margin-left: 1px;
-
+    color: orangered
 }
 
 .log-in-button{
@@ -75,18 +75,19 @@ input.password-input{
      margin-left: 68px;
      margin-top: 55px;
      width: 400px;
+     color: orangered
 }
 
 .signup-button:hover{
      background-color: orangered;
      cursor: pointer;
-     color: white;
+     color:  rgb(255, 246, 142);
+     border: 2px solid   rgb(255, 246, 142);;
 
 }
 
 .username{
-    color: orangered;
-    font-size: x-large;
+ color:  rgb(255, 246, 142);    font-size: x-large;
     padding-top: 4%;
     padding-left: 10px;
 }
@@ -94,18 +95,17 @@ input.password-input{
 
 
 .food-fight-header{
-    color: orangered;
+    color: rgb(255, 246, 142);
     text-align: center;
     padding-top: 6%
 }
 
 .second-header{
-    color: orangered;
+    color:  rgb(255, 246, 142);;
 }
 
 .email{
-        color: orangered;
-    font-size: x-large;
+ color:  rgb(255, 246, 142);    font-size: x-large;
     padding-top: 4%;
     padding-left: 10px;
 }
