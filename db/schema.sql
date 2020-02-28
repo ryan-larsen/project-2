@@ -1,3 +1,4 @@
+
 DROP DATABASE userDb;
 
 USE userDb;
@@ -12,4 +13,4 @@ CREATE TABLE users
   	createdAt  DATETIME,
     updatedAt DATETIME,
   	PRIMARY KEY( id )
-);
+)
