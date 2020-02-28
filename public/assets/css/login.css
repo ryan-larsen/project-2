@@ -27,6 +27,7 @@ body {
     border-color: orangered;
     opacity: .9;
     padding-left: 10px;
+    margin-left: 38px;
 }
 
 .password-input {
@@ -95,7 +96,7 @@ input.password-input{
 .food-fight-header{
     color: orangered;
     text-align: center;
-    padding-top: 10%
+    padding-top: 8%
 }
 
 .second-header{
