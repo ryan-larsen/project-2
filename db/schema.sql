@@ -13,3 +13,12 @@ CREATE TABLE users
     updatedAt DATETIME,
   	PRIMARY KEY( id )
 );
+
+CREATE TABLE posts
+(
+	id INT NOT NULL AUTO_INCREMENT,
+	meal VARCHAR( 255 ) NOT NULL,
+	createdAt DATETIME,
+	votes INT,
+  	PRIMARY KEY( id )
+);
