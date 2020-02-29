@@ -47,3 +47,59 @@ $(document).ready(function () {
     
   }
 })
+
+
+var ddData = [
+  {
+      text: "French Fry Samurai",
+      value: 1,
+      selected: true,
+      description: "Once he unsheathes his blades he must draw ketchup",
+      imageSrc: "/assets/images/frenchFry.png"
+  },
+  {
+      text: "Burger Boxer",
+      value: 2,
+      selected: false,
+      description: "Don't forget the pickles",
+      imageSrc: "/assets/images/burgerBoxer.png"
+  },
+  {
+      text: "Spartan Soda",
+      value: 3,
+      selected: false,
+      description: "300 psi of power",
+      imageSrc: "/assets/images/colaFighter.png"
+  },
+  {
+    text: "Taco Templar",
+    value: 4,
+    selected: false,
+    description: "Get ready to feel the crunch",
+    imageSrc: "/assets/images/tacoFighter.png"
+  },
+  {
+      text: "Noodle Ninja",
+      value: 4,
+      selected: false,
+      description: "He's coming to take you out",
+      imageSrc: "/assets/images/noodleFighter.png"
+  },
+  {
+    text: "Burrito Barbarian",
+    value: 4,
+    selected: false,
+    description: "If you're Romaine* you should run",
+    imageSrc: "/assets/images/burritoFighter.png"
+  }
+];
+
+$('#myDropdown').ddslick({
+  data: ddData,
+  width: 300,
+  imagePosition: "left",
+  selectText: "Select your favorite social network",
+  onSelected: function (data) {
+      console.log(data);
+  }
+});

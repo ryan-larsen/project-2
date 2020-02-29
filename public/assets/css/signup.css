@@ -1,3 +1,5 @@
+
+
 body {
     font-family: Trade Winds
 }
@@ -118,5 +120,17 @@ input.password-input{
     opacity: .9;
     padding-left: 10px;
     width: 59;
-    margin-left: 40px;
+    margin-left: 46px;
+}
+
+.avatar{
+     color:  rgb(255, 246, 142);    font-size: x-large;
+    padding-top: 4%;
+    padding-left: 33px;
+    padding-right: 60px;
+
+}
+
+.avatar-group{
+    margin-top: 20px;
 }
