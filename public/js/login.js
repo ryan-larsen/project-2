@@ -3,7 +3,6 @@ $(document).ready(function () {
   const loginForm = $('form.login-form')
   const emailInput = $('input#email-input')
   const passwordInput = $('input#password-input')
-  const signUpButton = $('#signup-button')
 
 
   // When the form is submitted, we validate there's an email and password entered
