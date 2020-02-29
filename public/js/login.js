@@ -1,14 +1,20 @@
 $(document).ready(function () {
   // Getting references to our form and inputs
+<<<<<<< HEAD
   const loginForm = $('form.login-form')
   const emailInput = $('input#email-input')
   const passwordInput = $('input#password-input')
 
+=======
+  var loginForm = $('form.login')
+  var emailInput = $('input#email-input')
+  var passwordInput = $('input#password-input')
+>>>>>>> ff98071133cadca47b404ff0dce93b9d2dae794f
 
   // When the form is submitted, we validate there's an email and password entered
   loginForm.on('submit', function (event) {
     event.preventDefault()
-    const userData = {
+    var userData = {
       email: emailInput.val().trim(),
       password: passwordInput.val().trim()
     }
@@ -30,7 +36,7 @@ $(document).ready(function () {
       password: password
     })
       .then(function () {
-        window.location.replace('/vote')
+        window.location.replace('/members')
         // If there's an error, log the error
       })
       .catch(function (err) {
@@ -38,9 +44,3 @@ $(document).ready(function () {
       })
   }
 })
-
-
-
-
-
-

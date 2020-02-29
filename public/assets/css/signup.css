@@ -11,9 +11,7 @@ body {
     margin: 10% auto;
     position: relative;
     grid-gap: 30px;
-        border-radius: 25px;
-     
-  
+    border-radius: 25px;
 }
 
 .inner-form{
