@@ -2,9 +2,9 @@ DROP database IF EXISTS userDb;
 
 CREATE DATABASE userDb;
 
-CREATE DATABASE userDb;
+CREATE DATABASE userdb;
 
-USE userDb;
+USE userdb;
 
 CREATE TABLE users
 (
