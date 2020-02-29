@@ -1,0 +1,119 @@
+body {
+    font-family: Trade Winds
+}
+
+
+.login-form{
+    background: rgba(0, 0, 0, 0.6);
+    grid-row: 1 / span 1;
+    width: 40%;
+    height: 450px;
+    margin: 10% auto;
+    position: relative;
+    grid-gap: 30px;
+    border-radius: 25px;
+}
+
+.inner-form{
+    padding-left: 25px;
+}
+
+.login-input{
+    font-size: x-large;
+    color: orangered;
+    border-radius: 25px;
+    border-color: orangered;
+    opacity: .9;
+    padding-left: 10px;
+    margin-left: 38px;
+}
+
+.password-input {
+    margin-top: 10px;
+    font-size: x-large;
+    border-radius: 25px;
+    border-color: orangered;
+    opacity: .9;
+    padding-left: 10px;
+    width: 59;
+    color: orangered;
+    margin-left: 20px;
+    }
+
+ .password{
+    color:  rgb(255, 246, 142);
+    font-size: x-large;
+    padding-top: 2%;
+    padding-left: 10px;
+ }
+
+input.password-input{
+    margin-left: 1px;
+
+}
+
+.log-in-button{
+    margin-top: 2px;
+    background-color: white;
+    border-radius: 25px;
+    border: 2px solid orangered;
+    opacity: 0.9;
+    padding: 7px;
+    margin-left: 58px;
+    margin-top: 5px;
+    color: orangered;
+    padding-left: 167px;
+    padding-right: 167px;
+}
+
+.log-in-button:hover{
+    background-color: orangered;
+     cursor: pointer;
+     color:  rgb(255, 246, 142);
+     border: 2px solid rgb(255, 246, 142);
+}
+
+.signup-button{
+     margin-top: 2px;
+     background-color: white;
+     border-radius: 25px;
+     border: 2px solid orangered;
+     opacity: 0.9;
+     padding: 7px;
+     margin-left: 58px;
+     margin-top: 5px;
+     color: orangered;
+     padding-left: 167px;
+     padding-right: 167px;
+}
+
+.signup-button:hover{
+     background-color: orangered;
+     cursor: pointer;
+     color:  rgb(255, 246, 142);
+     border: 2px solid rgb(255, 246, 142);
+}
+
+.username{
+  color:  rgb(255, 246, 142);
+    font-size: x-large;
+    padding-top: 4%;
+    padding-left: 10px;
+}
+
+
+
+.food-fight-header{
+  color:  rgb(255, 246, 142);
+  text-align: center;
+  padding-top: 8%
+}
+
+.second-header{
+  color:  rgb(255, 246, 142);
+}
+
+.signup-div{
+    margin-top: 10px;
+}
+

@@ -1,0 +1,120 @@
+body {
+    font-family: Trade Winds
+}
+
+
+.login-form{
+    background: rgba(0, 0, 0, 0.6);
+    grid-row: 1 / span 1;
+    width: 42%;
+    height: 450px;
+    margin: 10% auto;
+    position: relative;
+    grid-gap: 30px;
+    border-radius: 25px;
+}
+
+.inner-form{
+    padding-left: 25px;
+}
+
+.login-input{
+    font-size: x-large;
+    color: orangered;
+    border-radius: 25px;
+    border-color: orangered;
+    opacity: .9;
+    padding-left: 10px;
+}
+
+.password-input {
+    margin-top: 10px;
+    font-size: x-large;
+ color:  rgb(255, 246, 142);
+     border-radius: 25px;
+    border-color: orangered;
+    opacity: .9;
+    padding-left: 10px;
+    width: 59;
+    }
+
+input.password-input{
+    margin-left: 1px;
+    color: orangered
+}
+
+.log-in-button{
+     margin-top: 40px;
+     background-color: white;
+     border-radius: 25px;
+     border: 2px solid orangered;
+     opacity: 0.9;
+     padding: 7px;
+     width: 100px;
+     margin-left: 56px;
+     width: 400px;
+
+}
+
+.log-in-button:hover{
+    background-color: orangered;
+    cursor: pointer;
+    color: white;
+}
+
+.signup-button{
+     margin-top: 10px;
+     background-color: white;
+     border-radius: 25px;
+     border: 2px solid orangered;
+     opacity: 0.9;
+     padding: 7px;
+     width: 100px;
+     margin-left: 68px;
+     margin-top: 55px;
+     width: 400px;
+     color: orangered
+}
+
+.signup-button:hover{
+     background-color: orangered;
+     cursor: pointer;
+     color:  rgb(255, 246, 142);
+     border: 2px solid   rgb(255, 246, 142);;
+
+}
+
+.username{
+ color:  rgb(255, 246, 142);    font-size: x-large;
+    padding-top: 4%;
+    padding-left: 10px;
+}
+
+
+
+.food-fight-header{
+    color: rgb(255, 246, 142);
+    text-align: center;
+    padding-top: 6%
+}
+
+.second-header{
+    color:  rgb(255, 246, 142);;
+}
+
+.email{
+ color:  rgb(255, 246, 142);    font-size: x-large;
+    padding-top: 4%;
+    padding-left: 10px;
+}
+
+.email-input{
+    font-size: x-large;
+    color: orangered;
+    border-radius: 25px;
+    border-color: orangered;
+    opacity: .9;
+    padding-left: 10px;
+    width: 59;
+    margin-left: 40px;
+}
