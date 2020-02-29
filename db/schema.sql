@@ -1,18 +1,18 @@
 
 DROP DATABASE userDb;
 
-USE userDb;
-
 CREATE DATABASE userDb;
+
+USE userDb;
 
 CREATE TABLE users
 (
 	id INT NOT NULL AUTO_INCREMENT,
-	email VARCHAR(255) NOT NULL,
-	password VARCHAR(255) NOT NULL,
+	email VARCHAR( 255 ) NOT NULL,
+	username VARCHAR( 255 ) NOT NULL
+	password VARCHAR( 255 ) NOT NULL,
   	createdAt  DATETIME,
     updatedAt DATETIME,
-<<<<<<< HEAD
   	PRIMARY KEY( id )
 );
 
@@ -24,7 +24,3 @@ CREATE TABLE posts
 	votes INT,
   	PRIMARY KEY( id )
 );
-=======
-  	PRIMARY KEY(id)
-)
->>>>>>> b2a45a997974988e01ec81008375ca367375b645

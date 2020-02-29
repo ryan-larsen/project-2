@@ -41,16 +41,16 @@
             <div class = "other-inner-form">
                
                 <div class = "username">
-                    <span class = "username">E-mail: </span> <input class = login-input type="email" name="login" />
+                    <span class="username">E-mail: </span> <input id="login-input" class = "login-input" type="email" name="login" />
                 </div> 
                 <div class = "password">
-                    <span class = "password">Password: </span> <input class="password-input" type="password" name="password">
+                    <span class = "password">Password: </span> <input id="password-input" class="password-input" type="password" name="password">
                 </div>
                 <div>
-                    <button class ="log-in-button">Log in</button>
+                    <a href="/vote" id="log-in-button" class="log-in-button">Log in</a>
                 </div>
                 <div class = "signup-div">
-                    <a href="/signup" id = signup-button class ="signup-button">Sign Up</a>
+                    <a href="/signup" id = "signup-button" class ="signup-button">Sign Up</a>
                 </div>
             </div>
         </div>
@@ -60,7 +60,7 @@
     <footer class = "new-footer">
         <p>&copy Copyright 2020 - Food Fight, LLC.</p>
     </footer>
-    <script src= "../../js/login.js"></script>
-    <script src= "../../js/signup.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src= "../../js/login.js"></script>
+    
   </body>
