@@ -4,14 +4,18 @@
 		<title>Roulette</title>
 		<link rel="stylesheet" type="text/css" href="../css/vote.css">
 	</head>
+	
+		
 	<body onload="init()">
+			<form class = "vote-form"> 
+			
 		<center>
 			<div>
 				<h1 class="shotterudTitle">Chefs</h1>
 			</div>
 			<div>
 				<input id="inputName" placeholder="Name">
-				<button id="addButton" onclick="addName()">Add</button>
+				<button id="addButton" onclick="addName()">Add Chef</button>
 			</div>
 			<div>
 				<ul id="names">
@@ -27,7 +31,7 @@
 		<br><br><br><br><br><br><br><br>
 		<center>
 			<div>
-				<button id="startButton" onclick="play()">Roll</button>
+				<button id="startButton" onclick="play()">Pick Chef</button>
 			</div>
 		</center>
 		<br><br>
@@ -37,16 +41,16 @@
 			</center>
 		</div>
 		<div id="winners" class="winners"></div>
-		
-		
-		
+	</form>
 	</body>
+
 	<script>
 		var amountOfBoxes = 100;
 
 		var order = [];
 
 		function init(){
+			event.preventDefault()
 			let roulette = document.getElementById("fillMeUpDaddy");
 			roulette.innerHTML = "";
 			let tempBets = [
@@ -65,7 +69,9 @@
 		}
 
     function rand (min, max) {
-        return Math.floor(Math.random() * (max - min)) + min;
+		event.preventDefault()
+		return Math.floor(Math.random() * (max - min)) + min;
+		
     }
 		
 		var colors= ['aqua', 'fuchsia', 'gray', 'green', 
@@ -80,6 +86,7 @@
 		var bets = [];
 
     function play () {
+		event.preventDefault()
 			//add sound if you want
       //var audio = new Audio('spin.mp3');
       //audio.play();
@@ -97,9 +104,11 @@
 					document.getElementById("fillMeUpDaddy").style.transitionDuration = "5s";
 				}, 50)
 				}, 5500)
+				
 		}
 
 		function playTimer(whatTimer, min, max){
+			event.preventDefault()
 			var time = rand(min*60000, max*60000);
 			setTimeout(function(){
 				//add sound if you want
