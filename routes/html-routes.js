@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-const path = require('path')
-=======
 // Requiring path to so we can use relative routes to our HTML files
 var path = require('path')
->>>>>>> ff98071133cadca47b404ff0dce93b9d2dae794f
 
 // Requiring our custom middleware for checking if a user is logged in
 var isAuthenticated = require('../config/middleware/isAuthenticated')

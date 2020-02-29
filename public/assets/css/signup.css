@@ -3,7 +3,7 @@ body {
 }
 
 
-.login-form{
+.signup-form{
     background: rgba(0, 0, 0, 0.6);
     grid-row: 1 / span 1;
     width: 42%;
@@ -11,7 +11,9 @@ body {
     margin: 10% auto;
     position: relative;
     grid-gap: 30px;
-    border-radius: 25px;
+        border-radius: 25px;
+     
+  
 }
 
 .inner-form{
