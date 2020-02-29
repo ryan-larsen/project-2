@@ -1,7 +1,9 @@
 body {
-    background: url(../images/VoteFood.JPG) no-repeat center center fixed; 
-    
-    background-size: 1000px,500px ;
+    background: url(../images/FoodFight.JPG) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
   }
   
   a:hover {
@@ -35,6 +37,7 @@ body {
     border-left: solid rgba(0, 0, 0, 0) 15px;
     border-right: solid rgba(0, 0, 0, 0) 15px;
   }
+  
   
   
   
@@ -153,6 +156,7 @@ body {
   }
   
   
+  
   #foodfight-intro-logo {
     font-size: 120px;
     font-family: "Lobster Two", cursive;
@@ -240,28 +244,7 @@ body {
   
   
   
-  .fa-utensils {
-    color: white;
-    font-size: 145px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-top: 60px;
-    padding-bottom: 34px;
-  }
-  
-  
-  
-  .noResultsFound {
-    color: white;
-    font-family: "Quicksand", sans-serif;
-    font-weight: bold;
-    text-align: center;
-    align-self: center;
-    font-size: 35px;
-  }
-  
-  /* Flip Animation Styling */
+  /*  Animation Styling */
   .parent-card {
     width: 100%;
     height: 100%;
@@ -300,7 +283,6 @@ body {
     min-height: calc(100vh - 80px);
   }
   
- 
   
   footer {
     height: 80px;
@@ -314,7 +296,7 @@ body {
     border-top: solid rgb(213, 53, 62, 0.8) 5px;
   }
   
-  /* Styling for Current Plans HTML Page*/
+  /* Styling for Current meals HTML Page*/
   #templateMovie,
   #templateRest {
     display: none;
@@ -338,8 +320,6 @@ body {
     padding: 40px;
     grid-gap: 30px;
   }
-
-  
   
   #foodfight-selections {
     margin-top: 30px;
@@ -538,161 +518,4 @@ body {
     letter-spacing: 1px;
   }
   
-  .accordion {
-    cursor: pointer;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none !important;
-    transition: 0.4s;
-    font-weight: bold;
-    background: rgb(255, 255, 255, 0.5);
-    padding: 10px;
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: flex-end;
-    align-items: baseline;
-    font-family: "Quicksand", sans-serif;
-  }
-  
-  .active,
-  .accordion:hover {
-    background: rgb(220, 20, 60);
-  }
-  
-  .panel {
-    padding: 0 18px;
-    display: none;
-    background-color: white;
-    overflow: hidden;
-  }
-  .accordion:after {
-    content: "\02795"; /* Unicode character for "plus" sign (+) */
-    font-size: 16px;
-    margin-right: 10px;
-  }
-  
-  .active:after {
-    content: "\2796"; /* Unicode character for "minus" sign (-) */
-  }
-  
-  #formspree {
-    margin: 30px auto;
-    width: 900px;
-    background: rgb(0, 0, 0, 0.6);
-    padding: 30px;
-    border-radius: 10px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-  
-  #nameFormspree {
-    margin-bottom: 20px;
-    width: 180px;
-    height: 50px;
-    padding: 15px;
-    outline: none;
-    border: none;
-    margin-right: 20px;
-    background: rgb(70, 70, 70);
-    color: white;
-    font-weight: lighter;
-    font-family: "Quicksand", sans-serif;
-    border-bottom: solid indianred 2px;
-  }
-  
-  
-  #subjectFormspree {
-    margin-bottom: 20px;
-    width: 384px;
-    height: 50px;
-    padding: 15px;
-    outline-color: none;
-    border: none;
-    background: rgb(70, 70, 70);
-    color: white;
-    font-weight: lighter;
-    font-family: "Quicksand", sans-serif;
-    border-bottom: solid indianred 2px;
-  }
-  
-  #subjectFormspree::placeholder {
-    color: rgba(255, 255, 255, 0.4);
-    font-weight: lighter;
-    font-family: "Quicksand", sans-serif;
-  }
-  
-  #textFormspree {
-    margin-bottom: 20px;
-    padding: 15px;
-    outline: none;
-    border: none;
-    max-height: 150px;
-    width: 384px;
-    min-height: 150px;
-    background: rgb(70, 70, 70);
-    color: white;
-    font-weight: lighter;
-    font-family: "Quicksand", sans-serif;
-    border-bottom: solid indianred 2px;
-  }
-  
-  #textFormspree::placeholder {
-    color: rgba(255, 255, 255, 0.4);
-    font-weight: lighter;
-    font-family: "Quicksand", sans-serif;
-  }
-  
-  #submitFormspree {
-    background: transparent;
-    border: solid indianred 2px;
-    border-radius: 5px;
-    color: indianred;
-    width: 65px;
-    height: 40px;
-    margin-left: 319px;
-  }
-  
-  #submitFormspree:focus,
-  #subjectFormspree:focus {
-    outline: none;
-  }
-  
-  #submitFormspree:hover {
-    background: rgba(0, 0, 0, 0.4);
-  }
-  
-  #formOutline {
-    border: solid indianred 2px;
-    width: 422px;
-    padding: 16px;
-  }
-  
-  #contactUs {
-    font-family: "Quicksand", sans-serif;
-    color: white;
-    padding: 20px;
-    font-size: 25px;
-  }
-  
-  /* Animate.js Styling */
-  .ml9 {
-    position: relative;
-    font-weight: 200;
-    font-size: 4em;
-  }
-  
-  .ml9 .text-wrapper {
-    position: relative;
-    display: inline-block;
-    padding-top: 0.2em;
-    padding-right: 0.05em;
-    padding-bottom: 0.1em;
-    overflow: hidden;
-  }
-  
-  .ml9 .letter {
-    transform-origin: 50% 100%;
-    display: inline-block;
-    line-height: 1em;
-  }
+ 
