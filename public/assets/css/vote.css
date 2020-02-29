@@ -39,7 +39,7 @@ input[type=number]{
 
 .shotterudTitle{
     font-size: 94px;
-    text-shadow: 3px 3px 1px yellow, 3px -3px 1px magenta, -3px 3px 1px cyan;
+    text-shadow: 3px 3px 1px orangered, 3px -3px 1px orange, -3px 3px 1px peru;
     z-index: 1;
 }
 

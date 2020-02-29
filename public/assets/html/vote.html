@@ -7,7 +7,7 @@
 	<body onload="init()">
 		<center>
 			<div>
-				<h1 class="shotterudTitle">Roulette</h1>
+				<h1 class="shotterudTitle">Chefs</h1>
 			</div>
 			<div>
 				<input id="inputName" placeholder="Name">
@@ -50,8 +50,8 @@
 			let roulette = document.getElementById("fillMeUpDaddy");
 			roulette.innerHTML = "";
 			let tempBets = [
-				["player1", "red"], 
-				["player2", "yellowgreen"]
+				["chef1", "white"], 
+				["chef2", "white"]
 			];
 			for(var i = 0; i < amountOfBoxes; i++){
 					var randomPlayer = rand(0, tempBets.length)
