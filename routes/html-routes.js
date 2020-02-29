@@ -27,8 +27,8 @@ module.exports = function (app) {
   })
 
   // Here we've add our isAuthenticated middleware to this route.
-  // If a user who is not logged in tries to access this route they will be redirected to the signup page
+  // If a user who is not logged in tries to access this route they will be redirected to the login page
   app.get('/vote', isAuthenticated, function (req, res) {
-    res.sendFile(path.join(__dirname, '../public/assets/html/vote.html'))
+    res.sendFile(path.join(__dirname, '../public/assets/html/login.html'))
   })
 }
