@@ -1,7 +1,8 @@
 
 
 body {
-    font-family: Trade Winds
+    font-family: Trade Winds;
+    border-radius: 25px 
 }
 
 
@@ -134,3 +135,27 @@ input.password-input{
 .avatar-group{
     margin-top: 20px;
 }
+
+
+.dd-option, ::after, ::before {
+    box-sizing: border-box;
+    border-radius: 25px;
+}
+
+div.dd-select{
+    border-radius: 25px;
+}
+
+li {
+    border-radius: 25px;
+}
+
+.dd-option-description.dd-desc{
+    border-radius: 0;
+}
+
+ul.dd-options{
+   border-radius: 25px;
+   margin-bottom: 25px;
+}
+
