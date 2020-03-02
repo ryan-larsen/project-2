@@ -1,18 +1,6 @@
 <template>
 
-<div id="app">
 
-<Header/>
-
-<div class="body">
-
-<Poll :options="options"/>
-
-<PollsChart :options="options" v-if="voted"/>
-
-</div>
-
-</div>
 
 </template>
 
@@ -40,9 +28,39 @@ PollsChart
 
 data() {
 
-...
+
 
 },
+
+sockets: {
+
+connect() {
+
+console.log("connected");
+
+},
+
+voted(data) {
+
+this.options = this.options.map(option => {
+
+if (data.id === option.id) {
+
+option.value += 1;
+
+return option;
+
+}
+
+return option;
+
+});
+
+this.voted = true;
+
+}
+
+}
 
 };
 
@@ -50,6 +68,6 @@ data() {
 
 <style>
 
-...
+
 
 </style>

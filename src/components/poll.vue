@@ -1,6 +1,5 @@
 <template>
 
-...
 
 </template>
 
@@ -14,7 +13,7 @@ props: ["options"],
 
 data() {
 
-...
+
 
 },
 
