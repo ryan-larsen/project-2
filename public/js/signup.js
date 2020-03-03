@@ -17,7 +17,6 @@ $(document).ready(function () {
       email: emailInput.val().trim(),
       username: usernameInput.val().trim(),
       password: passwordInput.val().trim(),
-      avatar: avatarSelect.value
     }
     console.log(userData)
 
@@ -116,4 +115,4 @@ $('#myDropdown').ddslick({
 //  context: document
 //    images
 //      0: img.dd-selected-image
-//        src: "image link"
+//        src: "image link" 
