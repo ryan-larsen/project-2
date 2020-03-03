@@ -1,3 +1,4 @@
+
 $(document).ready(function () {
   // Getting references to our form and input
   const signUpForm = $('form.signup-form')
@@ -5,6 +6,9 @@ $(document).ready(function () {
   const passwordInput = $('input#password-input')
   const usernameInput = $('input#username-input')
   const avatarSelect = $('#myDropdown')
+  
+  
+  
 
   // When the signup button is clicked, we validate the email, username and password are not blank
   signUpForm.on('click', function (event) {
@@ -24,11 +28,12 @@ $(document).ready(function () {
     emailInput.val('')
     usernameInput.val('')
     passwordInput.val('')
+    
   })
 
   // Does a post to the signup route. If successful, we are redirected to the vote page
   // Otherwise we log any errors
-  function signUpUser (email, username, password) {
+  function signUpUser (email, username, password ) {
     $.post('/api/signup', {
       email: email,
       username: username,
@@ -47,6 +52,7 @@ $(document).ready(function () {
     
   }
 })
+
 
 
 var ddData = [
@@ -101,12 +107,12 @@ $('#myDropdown').ddslick({
   imagePosition: "left",
   selectText: "Select your favorite avatar",
   onSelected: function (data) {
-      console.log(data);
+      console.log(data.imageSrc);
   }
-});
+})
 
-
-function getSelectedValue(){
-  var selectedValue = document.querySelector(".dd-selected").data.ddData.value
-  console.log(selectedValue)
-}
+// div#myDropdown.dd-container
+//  context: document
+//    images
+//      0: img.dd-selected-image
+//        src: "image link"
