@@ -1,5 +1,4 @@
-
-DROP DATABASE userDb;
+DROP database IF EXISTS userDb;
 
 CREATE DATABASE userDb;
 
