@@ -124,6 +124,8 @@ input.password-input{
     margin-left: 46px;
 }
 
+/* drop down section */
+
 .avatar{
      color:  rgb(255, 246, 142);    font-size: x-large;
     padding-top: 4%;
@@ -137,12 +139,21 @@ input.password-input{
 }
 
 
+a.dd-option:hover{
+    background-color: rgb(255, 246, 142);
+}
+
 .dd-option, ::after, ::before {
     box-sizing: border-box;
     border-radius: 25px;
 }
 
 div.dd-select{
+    border-radius: 25px;
+}
+
+a.dd-selected:hover {
+    background-color:rgb(255, 246, 142);
     border-radius: 25px;
 }
 
@@ -159,3 +170,10 @@ ul.dd-options{
    margin-bottom: 25px;
 }
 
+img.dd-selected-image{
+    border-radius: 25px;
+}
+
+img.dd-option-image{
+    border-radius: 25px;
+}

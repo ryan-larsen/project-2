@@ -78,7 +78,7 @@ var ddData = [
     selected: true,
     description: "Once he unsheathes his blades he must draw ketchup",
     imageSrc: "/assets/images/frenchFry.png"
-  },
+ },
   {
       text: "Noodle Ninja",
       value: "noodleNinja",
@@ -101,6 +101,12 @@ $('#myDropdown').ddslick({
   imagePosition: "left",
   selectText: "Select your favorite avatar",
   onSelected: function (data) {
-      console.log(data(data));
+      console.log(data);
   }
 });
+
+
+function getSelectedValue(){
+  var selectedValue = document.querySelector(".dd-selected").data.ddData.value
+  console.log(selectedValue)
+}
