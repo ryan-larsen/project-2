@@ -38,6 +38,7 @@ body {
     width: 59;
     color: orangered;
     margin-left: 20px;
+    margin-bottom: 50px;
     }
 
  .password{
@@ -53,17 +54,17 @@ input.password-input{
 }
 
 .log-in-button{
-    margin-top: 2px;
     background-color: white;
     border-radius: 25px;
     border: 2px solid orangered;
     opacity: 0.9;
     padding: 7px;
     margin-left: 58px;
-    margin-top: 5px;
+    margin-top: 20px;
     color: orangered;
     padding-left: 167px;
     padding-right: 167px;
+    margin-bottom: 20px;
 }
 
 .log-in-button:hover{
@@ -85,6 +86,7 @@ input.password-input{
      color: orangered;
      padding-left: 167px;
      padding-right: 167px;
+     margin-top: 20px;
 }
 
 .signup-button:hover{
@@ -114,6 +116,6 @@ input.password-input{
 }
 
 .signup-div{
-    margin-top: 10px;
+    margin-top: 40px;
 }
 
