@@ -1,17 +1,10 @@
 body {
-  
-    background: 
-      /* top, transparent red, faked with gradient */ 
-      linear-gradient(
-        rgba(121, 120, 120, 0.45), 
-        rgba(121, 120, 120, 0.45),
-        url(../images/FoodFight.JPG) no-repeat center center fixed,
-       
-      )
-    
-    
+    background: url(../images/FoodFight.JPG) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
   }
-
   
   a:hover {
     text-decoration: none;
