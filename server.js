@@ -29,3 +29,15 @@ db.sequelize.sync().then(function () {
     console.log('App listening on PORT ', PORT)
   })
 })
+// socket server 
+
+const http = require('http').createServer(app);
+const io = require('socket.io')(http);
+io.on('connection', async (socket) => {
+
+  socket.on('vote', (data) => {
+  
+  socket.emit('voted', data);
+  
+  });
+});
