@@ -5,7 +5,7 @@ $(document).ready(function () {
   const emailInput = $('input#email-input')
   const passwordInput = $('input#password-input')
   const usernameInput = $('input#username-input')
-  const avatarSelect = $('#myDropdown')
+  const avatarSelect = $('select#myDropdown')
   
   
   
@@ -17,6 +17,7 @@ $(document).ready(function () {
       email: emailInput.val().trim(),
       username: usernameInput.val().trim(),
       password: passwordInput.val().trim(),
+      avatar: avatarSelect.value
     }
     console.log(userData)
 
@@ -107,7 +108,7 @@ $('#myDropdown').ddslick({
   imagePosition: "left",
   selectText: "Select your favorite avatar",
   onSelected: function (data) {
-      console.log(data.imageSrc);
+      console.log(data);
   }
 })
 
