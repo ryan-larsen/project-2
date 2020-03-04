@@ -102,9 +102,3 @@ $('#myDropdown').ddslick({
     console.log(data.imageSrc)
   }
 })
-
-// div#myDropdown.dd-container
-//  context: document
-//    images
-//      0: img.dd-selected-image
-//        src: "image link"
