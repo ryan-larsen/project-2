@@ -35,7 +35,11 @@
             let chosenPlayer = document.createElement("div")
 			let playerInput = document.createElement("input")
 			playerInput.id = "playerInput"
-			playerInput.innerHTML = "Enter Your Meal Here"
+			// playerInput.innerHTML = "Enter Your Meal Here"
+
+			let secondForm = document.createElement("div")
+			secondForm.className ="secondForm"
+
 
 			let winnerSubmit = document.createElement("button")
 			winnerSubmit.id = "winnerSubmitButton"
@@ -48,7 +52,7 @@
 			chosenPlayer.innerHTML = bets[order[parseInt(offset/140)]][0];
 
 			setTimeout(function(){
-				
+				document.querySelector("secondForm").appendChild(secondForm)
                 document.getElementById("winnersSubmit").appendChild(winnerSubmit)
                 document.getElementById("winners").appendChild(chosenPlayer)
                 document.getElementById("winnersInput").appendChild(playerInput);
