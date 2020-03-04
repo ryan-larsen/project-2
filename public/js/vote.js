@@ -29,14 +29,27 @@
 		event.preventDefault()
 			//add sound if you want
       //var audio = new Audio('spin.mp3');
-      //audio.play();
+	  //audio.play();
 			var offset = rand(0, amountOfBoxes*140-180)+180;
 			document.getElementById("fillMeUpDaddy").style.left = -(offset-180) + "px";
             let chosenPlayer = document.createElement("div")
-            let playerInput = document.createElement("input")
+			let playerInput = document.createElement("input")
+			playerInput.id = "playerInput"
+			playerInput.innerHTML = "Enter Your Meal Here"
+
+			let winnerSubmit = document.createElement("button")
+			winnerSubmit.id = "winnerSubmitButton"
+			winnerSubmit.innerHTML = "Submit"
+			
+
+
+            playerInput.innerHTML = bets[order[parseInt(offset/140)]][0];
             chosenPlayer.style.backgroundColor = bets[order[parseInt(offset/140)]][1];
 			chosenPlayer.innerHTML = bets[order[parseInt(offset/140)]][0];
+
 			setTimeout(function(){
+				
+                document.getElementById("winnersSubmit").appendChild(winnerSubmit)
                 document.getElementById("winners").appendChild(chosenPlayer)
                 document.getElementById("winnersInput").appendChild(playerInput);
 				document.getElementById("fillMeUpDaddy").style.transitionDuration = "0s";
