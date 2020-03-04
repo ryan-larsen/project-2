@@ -24,7 +24,6 @@ $(document).ready(function () {
     emailInput.val('')
     usernameInput.val('')
     passwordInput.val('')
-    
   })
 
   // Does a post to the signup route. If successful, we are redirected to the vote page
@@ -48,61 +47,59 @@ $(document).ready(function () {
   }
 })
 
-
-
 var ddData = [
- 
+
   {
-      text: "Burger Boxer",
-      value: "burgerBoxer",
-      selected: false,
-      description: "Don't forget the pickles",
-      imageSrc: "/assets/images/burgerBoxer.png"
-  },
-  {
-      text: "Spartan Soda",
-      value: "spartanSoda",
-      selected: false,
-      description: "300 psi of power",
-      imageSrc: "/assets/images/colaFighter.png"
-  },
-  {
-    text: "Taco Templar",
-    value: "tacoTemplar",
+    text: 'Burger Boxer',
+    value: 'burgerBoxer',
     selected: false,
-    description: "Get ready to feel the crunch",
-    imageSrc: "/assets/images/tacoFighter.png"
+    description: "Don't forget the pickles",
+    imageSrc: '/assets/images/burgerBoxer.png'
   },
   {
-    text: "French Fry Samurai",
-    value: "frenchFry",
+    text: 'Spartan Soda',
+    value: 'spartanSoda',
+    selected: false,
+    description: '300 psi of power',
+    imageSrc: '/assets/images/colaFighter.png'
+  },
+  {
+    text: 'Taco Templar',
+    value: 'tacoTemplar',
+    selected: false,
+    description: 'Get ready to feel the crunch',
+    imageSrc: '/assets/images/tacoFighter.png'
+  },
+  {
+    text: 'French Fry Samurai',
+    value: 'frenchFry',
     selected: true,
-    description: "Once he unsheathes his blades he must draw ketchup",
-    imageSrc: "/assets/images/frenchFry.png"
- },
-  {
-      text: "Noodle Ninja",
-      value: "noodleNinja",
-      selected: false,
-      description: "He's coming to take you out",
-      imageSrc: "/assets/images/noodleFighter.png"
+    description: 'Once he unsheathes his blades he must draw ketchup',
+    imageSrc: '/assets/images/frenchFry.png'
   },
   {
-    text: "Burrito Barbarian",
-    value: "burritoBarbarian",
+    text: 'Noodle Ninja',
+    value: 'noodleNinja',
+    selected: false,
+    description: "He's coming to take you out",
+    imageSrc: '/assets/images/noodleFighter.png'
+  },
+  {
+    text: 'Burrito Barbarian',
+    value: 'burritoBarbarian',
     selected: false,
     description: "If you're a Romaine* you should run",
-    imageSrc: "/assets/images/burritoFighter.png"
+    imageSrc: '/assets/images/burritoFighter.png'
   }
-];
+]
 
 $('#myDropdown').ddslick({
   data: ddData,
   width: 300,
-  imagePosition: "left",
-  selectText: "Select your favorite avatar",
+  imagePosition: 'left',
+  selectText: 'Select your favorite avatar',
   onSelected: function (data) {
-      console.log(data.imageSrc);
+    console.log(data.imageSrc)
   }
 })
 

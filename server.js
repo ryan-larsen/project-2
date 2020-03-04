@@ -1,7 +1,7 @@
 // Requiring necessary npm packages
 const express = require('express')
 const session = require('express-session')
-// Requiring passport as we've configured it
+const bodyParser = require('body-parser')
 const passport = require('./config/passport')
 
 // Setting up port and requiring models for syncing
@@ -13,6 +13,9 @@ const app = express()
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 app.use(express.static('public'))
+
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: false }))
 
 // Use sessions to keep track of the users login status
 app.use(session({ secret: 'keyboard cat', resave: true, saveUninitialized: true }))
@@ -29,15 +32,3 @@ db.sequelize.sync().then(function () {
     console.log('App listening on PORT ', PORT)
   })
 })
-// socket server 
-
-const http = require('http').createServer(app);
-const io = require('socket.io')(http);
-io.on('connection', async (socket) => {
-
-  socket.on('vote', (data) => {
-  
-  socket.emit('voted', data);
-  
-  });
-});
