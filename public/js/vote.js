@@ -22,7 +22,7 @@
 		event.preventDefault()
 		return Math.floor(Math.random() * (max - min)) + min;
     }
-		var colors= ['FF450', '#ee5c1f', '#f37e22', '#f4ac23', ];
+		var colors= ['FF450', '#ee5c1f', '#f37e22', '#f4ac23'];
     var width = 80;
 		var bets = [];
     function play () {
@@ -39,24 +39,14 @@
 			let inputDiv = document.createElement("div")
 			inputDiv.className = "winnerInput"
 			inputDiv.appendChild(playerInput)
-			// playerInput.innerHTML = "Enter Your Meal Here"
-			let winnerDiv = document.createElement("div")
-			winnerDiv.className = "row winner"
-
-			let meal = document.createElement("div")
-			meal.className = "meal"
-
-
-			// let secondForm = document.createElement("div")
-			// secondForm.className ="secondForm"
-
 
 			let winnerSubmit = document.createElement("button")
+			winnerSubmit.appendChild(inputDiv)
 			winnerSubmit.id = "winnerSubmit"
 			winnerSubmit.innerHTML = "Submit" 
 			winnerSubmit.addEventListener('click', function (event){
 				event.preventDefault()
-				let submittedMeal = document.createElement("p") 
+				let submittedMeal = document.createElement("div") 
 				submittedMeal.innerText = this.parentNode.previousSibling.childNodes[0].value
 
 				this.parentNode.nextSibling.appendChild(submittedMeal)
@@ -66,6 +56,20 @@
 			let submitDiv = document.createElement("div")
 			submitDiv.className = "winnerSubmit"
 			submitDiv.appendChild(winnerSubmit)
+			
+			// playerInput.innerHTML = "Enter Your Meal Here"
+			let winnerDiv = document.createElement("div")
+			winnerDiv.className = "row winnerRow"
+
+			let meal = document.createElement("div")
+			meal.className = "meal"
+
+
+			// let secondForm = document.createElement("div")
+			// secondForm.className ="secondForm"
+
+
+		
 			
 
 
@@ -209,6 +213,7 @@
 			}
 		}
 		function addName() {
+			event.preventDefault()
 			var node = document.createElement("LI");
 			var name = document.getElementById("inputName").value
 			document.getElementById("inputName").value = ""
