@@ -27,9 +27,6 @@
 		var bets = [];
     function play () {
 		event.preventDefault()
-			//add sound if you want
-      //var audio = new Audio('spin.mp3');
-	  //audio.play();
 			var offset = rand(0, amountOfBoxes*140-180)+180;
 			document.getElementById("fillMeUpDaddy").style.left = -(offset-180) + "px";
 			let chosenPlayer = document.createElement("div")
@@ -38,7 +35,10 @@
 			
 			let inputDiv = document.createElement("div")
 			inputDiv.className = "winnerInput"
+
 			inputDiv.appendChild(playerInput)
+
+
 
 			let winnerSubmit = document.createElement("button")
 			winnerSubmit.appendChild(inputDiv)
@@ -46,10 +46,10 @@
 			winnerSubmit.innerHTML = "Submit" 
 			winnerSubmit.addEventListener('click', function (event){
 				event.preventDefault()
-				let submittedMeal = document.createElement("div") 
+				let submittedMeal = document.createElement("p") 
 				submittedMeal.innerText = this.parentNode.previousSibling.childNodes[0].value
 
-				this.parentNode.nextSibling.appendChild(submittedMeal)
+				
 
 				//add submitted meal to the div tag thats under the submit button
 			})
