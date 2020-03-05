@@ -32,18 +32,40 @@
 	  //audio.play();
 			var offset = rand(0, amountOfBoxes*140-180)+180;
 			document.getElementById("fillMeUpDaddy").style.left = -(offset-180) + "px";
-            let chosenPlayer = document.createElement("div")
+			let chosenPlayer = document.createElement("div")
+			chosenPlayer.className = "winner"
 			let playerInput = document.createElement("input")
-			playerInput.id = "playerInput"
+			
+			let inputDiv = document.createElement("div")
+			inputDiv.className = "winnerInput"
+			inputDiv.appendChild(playerInput)
 			// playerInput.innerHTML = "Enter Your Meal Here"
+			let winnerDiv = document.createElement("div")
+			winnerDiv.className = "row winner"
 
-			let secondForm = document.createElement("div")
-			secondForm.className ="secondForm"
+			let meal = document.createElement("div")
+			meal.className = "meal"
+
+
+			// let secondForm = document.createElement("div")
+			// secondForm.className ="secondForm"
 
 
 			let winnerSubmit = document.createElement("button")
-			winnerSubmit.id = "winnerSubmitButton"
-			winnerSubmit.innerHTML = "Submit"
+			winnerSubmit.id = "winnerSubmit"
+			winnerSubmit.innerHTML = "Submit" 
+			winnerSubmit.addEventListener('click', function (event){
+				event.preventDefault()
+				let submittedMeal = document.createElement("p") 
+				submittedMeal.innerText = this.parentNode.previousSibling.childNodes[0].value
+
+				this.parentNode.nextSibling.appendChild(submittedMeal)
+
+				//add submitted meal to the div tag thats under the submit button
+			})
+			let submitDiv = document.createElement("div")
+			submitDiv.className = "winnerSubmit"
+			submitDiv.appendChild(winnerSubmit)
 			
 
 
@@ -52,10 +74,12 @@
 			chosenPlayer.innerHTML = bets[order[parseInt(offset/140)]][0];
 
 			setTimeout(function(){
-				document.querySelector("secondForm").appendChild(secondForm)
-                document.getElementById("winnersSubmit").appendChild(winnerSubmit)
-                document.getElementById("winners").appendChild(chosenPlayer)
-                document.getElementById("winnersInput").appendChild(playerInput);
+				// document.querySelector("secondForm").appendChild(secondForm)
+                winnerDiv.appendChild(chosenPlayer)
+				winnerDiv.appendChild(inputDiv);
+				winnerDiv.appendChild(submitDiv)
+				let generatedWinners = document.getElementById("generatedWinners")
+				generatedWinners.appendChild(winnerDiv)
 				document.getElementById("fillMeUpDaddy").style.transitionDuration = "0s";
 				document.getElementById("fillMeUpDaddy").style.left = "0px";
 				setTimeout(function(){
