@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const keys = require('./keys');
+const keys = require('./key');
 
 // Map global promises
 mongoose.Promise = global.Promise;

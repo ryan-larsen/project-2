@@ -23,7 +23,7 @@ fetch("http://localhost:3000/poll")
     .then(data => {
         let votes = data.votes;
         let totalVotes = votes.length;
-        document.querySelector('#chartTitle').textContent = `Total Votes: ${totalVotes}`;
+        // document.querySelector('#chartTitle').textContent = `Total Votes: ${totalVotes}`;
 
         let voteCounts = {
             Windows: 0,
@@ -58,7 +58,7 @@ fetch("http://localhost:3000/poll")
                 theme: 'theme1',
                 data:[
                     {
-                        type: 'column',
+                        type: 'pie',
                         dataPoints: dataPoints
                     }
                 ]
