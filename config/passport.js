@@ -8,7 +8,7 @@ passport.use(new LocalStrategy(
     usernameField: 'email'
   },
   function (email, password, done) {
-    // When a user signs in this code runs
+    // Matching Users
     db.User.findOne({
       where: {
         email: email
@@ -17,11 +17,9 @@ passport.use(new LocalStrategy(
       // If there's no user with the given email
       if (!dbUser) {
         return done(null, false, {
-          message: 'Incorrect email.'
+          message: 'Email is not registered.'
         })
-      }
-      // If there is a user with the given email, but the password the user gives us is incorrect
-      else if (!dbUser.validPassword(password)) {
+      } else if (!dbUser.validPassword(password)) {
         return done(null, false, {
           message: 'Incorrect password.'
         })
