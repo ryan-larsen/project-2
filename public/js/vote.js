@@ -1,5 +1,4 @@
 var amountOfBoxes = 100
-const randomPlayerName = document.querySelector('.winner')
 var order = []
 function init () {
   event.preventDefault()
@@ -26,45 +25,40 @@ function rand (min, max) {
 var colors = ['FF450', '#ee5c1f', '#f37e22', '#f4ac23']
 var width = 80
 var bets = []
+let count = 0
+count = count + 1
 function play () {
   event.preventDefault()
-  let count = 0
-  count++
   var offset = rand(0, amountOfBoxes * 140 - 180) + 180
   document.getElementById('fillMeUpDaddy').style.left = -(offset - 180) + 'px'
   const chosenPlayer = document.createElement('div')
   chosenPlayer.className = 'winner'
-  const playerInput = document.createElement('input')
-  playerInput.setAttribute('type', 'text')
-  playerInput.setAttribute('name', 'textbox' + count)
-  playerInput.setAttribute('class', 'playerInput')
 
-  // /* In your function */
-  // // create a textbox dynamically
-  // var eleText = document.createElement('input')
-  // eleText.setAttribute('type', 'text')
-  // eleText.setAttribute('name', 'textbox' + count)
-  // eleText.setAttribute('id', 'textbox' + textboxCount)
-  // textboxCount += 1 //Increment the count
+  const playerInput = document.createElement('input')
+  playerInput.setAttribute('id', 'input-' + count++)
+  playerInput.setAttribute('class', 'playInput')
 
   const inputDiv = document.createElement('div')
   inputDiv.className = 'winnerInput'
+
   inputDiv.appendChild(playerInput)
 
   // playerInput.innerHTML = "Enter Your Meal Here"
   const winnerDiv = document.createElement('form')
   winnerDiv.className = 'row winnerRow'
-  const meal = document.createElement('form')
+
+  const meal = document.createElement('h1')
   meal.className = 'meal'
+
   const winnerSubmit = document.createElement('button')
   winnerSubmit.appendChild(inputDiv)
-  winnerSubmit.id = playerInput.val
+  winnerSubmit.id = 'winnerSubmit'
   winnerSubmit.innerHTML = 'Submit'
 
   winnerSubmit.addEventListener('click', function (event) {
     event.preventDefault()
 
-    const val = document.querySelector('.playerInput').value
+    const val = document.querySelectorAll('.playInput').value
     console.log(val)
     const submittedMealLabel = document.createElement('label')
     submittedMealLabel.setAttribute('for', val)
@@ -74,22 +68,21 @@ function play () {
     submittedMeal.setAttribute('name', val)
     submittedMeal.setAttribute('value', val)
     submittedMeal.textContent = val
-    document.getElementById('title').appendChild(submittedMeal)
-    document.getElementById('title').appendChild(submittedMealLabel)
-
-    // submittedMeal.appendchild(val)
-    // meal.appendChild(submittedMeal.innerText)
-    // add submitted meal to the div tag thats under the submit button
+    document.getElementById('meal-container').appendChild(submittedMeal)
+    document.getElementById('meal-container').appendChild(submittedMealLabel)
   })
+
   const submitDiv = document.createElement('div')
   submitDiv.className = 'winnerSubmit'
   submitDiv.appendChild(winnerSubmit)
+
   // let secondForm = document.createElement("div")
   // secondForm.className ="secondForm"
 
   playerInput.innerHTML = bets[order[parseInt(offset / 140)]][0]
   chosenPlayer.style.backgroundColor = bets[order[parseInt(offset / 140)]][1]
   chosenPlayer.innerHTML = bets[order[parseInt(offset / 140)]][0]
+
   setTimeout(function () {
     // document.querySelector("secondForm").appendChild(secondForm)
     winnerDiv.appendChild(chosenPlayer)
@@ -199,21 +192,8 @@ function addTimer () {
     document.getElementById('timerContainer').appendChild(removeAllButton)
     playTimer(amountOfTimers - 1, min, max)
   }
-  /*
-            <div class="rouletteContainer">
-                <div class="line">
-                </div>
-                <div id="fillMeUpDaddy" class="roulette">
-                </div>
-            </div>
-            */
 }
-// function removeName(playerToRemove){
-//      bets[playerToRemove] = 0;
-//      document.getElementById("n"+playerToRemove).remove();
-//      amountOfPlayers--;
-//      refreshRoulette();
-// }
+
 function clearAll (winnerToClear) {
   if (winnerToClear == -1) {
     document.getElementById('winners').innerHTML = ''
@@ -227,7 +207,7 @@ function addName () {
   var node = document.createElement('LI')
   var name = document.getElementById('inputName').value
   document.getElementById('inputName').value = ''
-  if (name !== '') {
+  if (name != '') {
     var textnode = document.createTextNode(name)
     const color = colors[rand(0, colors.length - 1)]
     node.style.backgroundColor = color
@@ -247,7 +227,6 @@ function addName () {
 }
 var amountOfPlayers = 0
 function refreshRoulette () {
-  event.preventDefault()
   const roulette = document.getElementById('fillMeUpDaddy')
   roulette.innerHTML = ''
   order = []
