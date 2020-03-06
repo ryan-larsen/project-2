@@ -24,8 +24,8 @@
       crossorigin="anonymous"
     />
     
-    <link rel="stylesheet" type="text/css" href="../assets/css/style.css" />
-    <link rel="stylesheet" type="text/css" href="../assets/css/signup.css"/>
+    <link rel="stylesheet" type="text/css" href="../../assets/css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="../../assets/css/signup.css"/>
     <link href="https://fonts.googleapis.com/css?family=Knewave|Trade+Winds&display=swap" rel="stylesheet">
     
 
@@ -39,13 +39,22 @@
          <h3 class ="second-header">Sign up below to start voting on meals!</h3>
             <div class = "other-inner-form">
                 <div class = "email">
-                  <span class = "email">E-mail:</span><input id="email-input" class ="email-input" type="email" name="login" />
+                  <span class = "email">E-mail :</span><input id="email-input" class ="email-input" type="email" name="login" />
                 </div> 
                 <div class = "username">
-                    <span class = "username">Username: </span> <input id="username-input" class = "login-input" type="text" name="login" />
+                    <span class = "username">Username : </span> <input id="username-input" class = "login-input" type="text" name="login" />
                 </div> 
+              
+                <div class = "row avatar-group">
+                    <div class = "avatar">Avatar :</div><select id="myDropdown" onchange="getSelectedValue()"></select>
+                </div>
+
                 <div class = "password-input">
-                    <span class = "password-input">Password: </span> <input id="password-input" class="password-input" type="password" name="password">
+                    <span class = "password-input">Password : </span> <input id="password-input" class="password-input" type="password" name="password">
+                </div>
+                <div style="display: none" id="alert" class="alert alert-danger" role="alert">
+                  <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                  <span class="sr-only">Error:</span> <span class="msg"></span>
                 </div>
                 <div>
                     <button id = "signup-button" class ="signup-button">Submit</button>
@@ -58,7 +67,14 @@
     <footer class = "footer">
         &copy Copyright 2020 - Food Fight, LLC.
       </footer>
+
+      
+
       <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+      <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+      <script type="text/javascript" src="https://cdn.rawgit.com/prashantchaudhary/ddslick/master/jquery.ddslick.min.js" ></script>
       <script src= "../../js/signup.js"></script>
+
+
       
   </body>

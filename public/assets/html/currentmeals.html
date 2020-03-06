@@ -5,11 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title> | Where Families Come To Dish It Out.</title>
-    <meta
-      name="google-site-verification"
-      content="5xKmiMQNgQDCQGi6LNJJQO-OkMHikVWHEdUPmiXatFQ"
-    />
+    <title>Current Meals | Food Fight</title>
     <meta
       name="description"
       content="Finding a meal that everybody can agree on. Connect with memebers and decide together."
@@ -27,12 +23,11 @@
       integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
-    <link rel="stylesheet" type="text/css" href="assets/css/preloader.css" />
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <link rel="stylesheet" type="text/css" href="../css/preloader.css" />
     <link
       
     />
-   
   </head>
 
   <body>
@@ -48,45 +43,67 @@
         </form>
 
         <div class="dropdown">
-          <i class="fas fa-user"></i>
-          <button
-            class="btn btn-secondary dropdown-toggle"
-            type="button"
-            id="dropdownMenuButton"
-            data-toggle="dropdown"
-            aria-haspopup="true"
-            aria-expanded="false"
-          ></button>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="index.html">Home</a>
-            <a class="dropdown-item" href="assets/html/currentmeals.html"
-              >Current Meals</a
+            <a class="dropdown-item" href="../../index.html">Home</a>
+            <a class="dropdown-item" href="currentmeals.html">Current Meals</a>
+            <a class="dropdown-item" href="vote.html">VOTE</a>
+            <a class="dropdown-item" href="../../index.html" id="signOut"
+              >Sign Out</a
             >
-            <a class="dropdown-item" href="assets/html/vote.html">VOTE</a>
-            <a class="dropdown-item" href="index.html" id="signOut">Sign Out</a>
           </div>
         </div>
       </header>
 
-      <main id="main-grid">
-        <div id="meal-div"></div>
+      <main>
+        <p class="cardText" id="foodfight-selections">
+          <span class="mini-foodfight-logo">Food Fight </span>Selections
+        </p>
 
-        <div id="search-div">
-          <span id="foodfight-intro-logo"></span>
-          
-          <h1 id="foodfight-intro" class="ml9">
-            <span class="text-wrapper">
-              <span class="letters"
-                >Where Families Come To Dish It Out</span
-              >
-            </span>
-          </h1>
+        <div id="selections-grid">
+          <div id="favCard">
+            <i
+              id="clearFavCard"
+              title="Remove Current Choices"
+              class="fas fa-trash-alt"
+            ></i>
+          </div>
+
+          <div class="invitationForm">
+            <i
+              id="sendInvitation"
+              title="Share Plans"
+              class="fas fa-share-square"
+            ></i>
+            <select class="friendList">
+              <option>Invite A Friend</option>
+            </select>
+            <label for="date" id="dateText">date...</label>
+            <input id="date" type="date" />
+            <label for="time" id="timeText">time...</label>
+            <input id="time" type="time" />
+            <label for="time" id="placeText">place...</label>
+            <input id="address" type="text" placeholder="address" />
+          </div>
+        </div>
+
+        <p class="cardText" id="bottomCardText">
+          <span class="mini-foodfight-logo">Food Fight </span>Invitations
+        </p>
+
+        <div id="userInviteTextDiv"><p id="userInviteText"></p></div>
+
+        <div id="invitation">
+          <i
+            id="removeInvitation"
+            class="fas fa-calendar"
+            title="Remove Calendar Invite"
+          ></i>
         </div>
       </main>
-    </div> 
+    </div>
 
-    <footer>
-      &copy Copyright 2020 - FoodFight, LLC.
+    <footer style="display: flex">
+      &copy Copyright 2020 - Food Fight, LLC.
       
     </footer>
 
@@ -112,6 +129,8 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 
-    <script rel="javascript" src="assets/javascript/logic.js"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+    <script rel="javascript" src="../javascript/logic.js"></script>
   </body>
 </html>

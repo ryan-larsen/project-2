@@ -1,9 +1,12 @@
+
+
 body {
-    font-family: Trade Winds
+    font-family: Trade Winds;
+    border-radius: 25px 
 }
 
 
-.login-form{
+.signup-form{
     background: rgba(0, 0, 0, 0.6);
     grid-row: 1 / span 1;
     width: 42%;
@@ -11,7 +14,9 @@ body {
     margin: 10% auto;
     position: relative;
     grid-gap: 30px;
-    border-radius: 25px;
+        border-radius: 25px;
+     
+  
 }
 
 .inner-form{
@@ -116,5 +121,59 @@ input.password-input{
     opacity: .9;
     padding-left: 10px;
     width: 59;
-    margin-left: 40px;
+    margin-left: 46px;
+}
+
+/* drop down section */
+
+.avatar{
+     color:  rgb(255, 246, 142);    font-size: x-large;
+    padding-top: 4%;
+    padding-left: 33px;
+    padding-right: 60px;
+
+}
+
+.avatar-group{
+    margin-top: 20px;
+}
+
+
+a.dd-option:hover{
+    background-color: rgb(255, 246, 142);
+}
+
+.dd-option, ::after, ::before {
+    box-sizing: border-box;
+    border-radius: 25px;
+}
+
+div.dd-select{
+    border-radius: 25px;
+}
+
+a.dd-selected:hover {
+    background-color:rgb(255, 246, 142);
+    border-radius: 25px;
+}
+
+li {
+    border-radius: 25px;
+}
+
+.dd-option-description.dd-desc{
+    border-radius: 0;
+}
+
+ul.dd-options{
+   border-radius: 25px;
+   margin-bottom: 25px;
+}
+
+img.dd-selected-image{
+    border-radius: 25px;
+}
+
+img.dd-option-image{
+    border-radius: 25px;
 }
