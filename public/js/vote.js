@@ -50,26 +50,143 @@ function play () {
   const meal = document.createElement('h1')
   meal.className = 'meal'
 
-  const winnerSubmit = document.createElement('button')
-  winnerSubmit.appendChild(inputDiv)
-  winnerSubmit.id = 'winnerSubmit'
-  winnerSubmit.innerHTML = 'Submit'
-
+  // const winnerSubmit = document.createElement('button')
+  // winnerSubmit.appendChild(inputDiv)
+  // winnerSubmit.id = 'winnerSubmit'
+  // winnerSubmit.innerHTML = 'Submit'
+  const winnerSubmit = document.querySelector('#winnerSubmit')
   winnerSubmit.addEventListener('click', function (event) {
     event.preventDefault()
 
-    const val = document.querySelectorAll('.playInput').value
-    console.log(val)
-    const submittedMealLabel = document.createElement('label')
-    submittedMealLabel.setAttribute('for', val)
-    submittedMealLabel.textContent = val
-    const submittedMeal = document.createElement('input')
-    submittedMeal.setAttribute('type', 'radio')
-    submittedMeal.setAttribute('name', val)
-    submittedMeal.setAttribute('value', val)
-    submittedMeal.textContent = val
-    document.getElementById('meal-container').appendChild(submittedMeal)
-    document.getElementById('meal-container').appendChild(submittedMealLabel)
+    const val1 = document.getElementById('input-1').value
+    console.log(val1)
+    const submittedMealLabel1 = document.createElement('label')
+    submittedMealLabel1.setAttribute('for', val1)
+    submittedMealLabel1.textContent = val1
+    const submittedMeal1 = document.createElement('input')
+    submittedMeal1.setAttribute('type', 'radio')
+    submittedMeal1.setAttribute('name', val1)
+    submittedMeal1.setAttribute('value', val1)
+    submittedMeal1.textContent = val1
+    document.getElementById('meal-container').appendChild(submittedMeal1)
+    document.getElementById('meal-container').appendChild(submittedMealLabel1)
+
+    const val2 = document.getElementById('input-2').value
+    console.log(val2)
+    const submittedMealLabel2 = document.createElement('label')
+    submittedMealLabel2.setAttribute('for', val2)
+    submittedMealLabel2.textContent = val2
+    const submittedMeal2 = document.createElement('input')
+    submittedMeal2.setAttribute('type', 'radio')
+    submittedMeal2.setAttribute('name', val2)
+    submittedMeal2.setAttribute('value', val2)
+    submittedMeal2.textContent = val2
+    document.getElementById('meal-container').appendChild(submittedMeal2)
+    document.getElementById('meal-container').appendChild(submittedMealLabel2)
+
+    const val3 = document.getElementById('input-3').value
+    console.log(val3)
+    const submittedMealLabel3 = document.createElement('label')
+    submittedMealLabel3.setAttribute('for', val3)
+    submittedMealLabel3.textContent = val3
+    const submittedMeal3 = document.createElement('input')
+    submittedMeal3.setAttribute('type', 'radio')
+    submittedMeal3.setAttribute('name', val3)
+    submittedMeal3.setAttribute('value', val3)
+    submittedMeal3.textContent = val3
+    document.getElementById('meal-container').appendChild(submittedMeal3)
+    document.getElementById('meal-container').appendChild(submittedMealLabel3)
+
+    const val4 = document.getElementById('input-4').value
+    console.log(val4)
+    const submittedMealLabel4 = document.createElement('label')
+    submittedMealLabel4.setAttribute('for', val4)
+    submittedMealLabel4.textContent = val4
+    const submittedMeal4 = document.createElement('input')
+    submittedMeal4.setAttribute('type', 'radio')
+    submittedMeal4.setAttribute('name', val4)
+    submittedMeal4.setAttribute('value', val4)
+    submittedMeal4.textContent = val4
+    document.getElementById('meal-container').appendChild(submittedMeal4)
+    document.getElementById('meal-container').appendChild(submittedMealLabel4)
+
+    const val5 = document.getElementById('input-5').value
+    console.log(val5)
+    const submittedMealLabel5 = document.createElement('label')
+    submittedMealLabel5.setAttribute('for', val5)
+    submittedMealLabel5.textContent = val5
+    const submittedMeal5 = document.createElement('input')
+    submittedMeal5.setAttribute('type', 'radio')
+    submittedMeal5.setAttribute('name', val5)
+    submittedMeal5.setAttribute('value', val5)
+    submittedMeal5.textContent = val5
+    document.getElementById('meal-container').appendChild(submittedMeal5)
+    document.getElementById('meal-container').appendChild(submittedMealLabel5)
+
+    const val6 = document.getElementById('input-6').value
+    console.log(val6)
+    const submittedMealLabel6 = document.createElement('label')
+    submittedMealLabel6.setAttribute('for', val6)
+    submittedMealLabel6.textContent = val6
+    const submittedMeal6 = document.createElement('input')
+    submittedMeal6.setAttribute('type', 'radio')
+    submittedMeal6.setAttribute('name', val6)
+    submittedMeal6.setAttribute('value', val6)
+    submittedMeal6.textContent = val6
+    document.getElementById('meal-container').appendChild(submittedMeal6)
+    document.getElementById('meal-container').appendChild(submittedMealLabel6)
+
+    const val7 = document.getElementById('input-7').value
+    console.log(val7)
+    const submittedMealLabel7 = document.createElement('label')
+    submittedMealLabel7.setAttribute('for', val7)
+    submittedMealLabel7.textContent = val7
+    const submittedMeal7 = document.createElement('input')
+    submittedMeal7.setAttribute('type', 'radio')
+    submittedMeal7.setAttribute('name', val7)
+    submittedMeal7.setAttribute('value', val7)
+    submittedMeal7.textContent = val7
+    document.getElementById('meal-container').appendChild(submittedMeal7)
+    document.getElementById('meal-container').appendChild(submittedMealLabel7)
+
+    const val8 = document.getElementById('input-8').value
+    console.log(val8)
+    const submittedMealLabel8 = document.createElement('label')
+    submittedMealLabel8.setAttribute('for', val8)
+    submittedMealLabel8.textContent = val8
+    const submittedMeal8 = document.createElement('input')
+    submittedMeal8.setAttribute('type', 'radio')
+    submittedMeal8.setAttribute('name', val8)
+    submittedMeal8.setAttribute('value', val8)
+    submittedMeal8.textContent = val8
+    document.getElementById('meal-container').appendChild(submittedMeal8)
+    document.getElementById('meal-container').appendChild(submittedMealLabel8)
+
+    const val9 = document.getElementById('input-9').value
+    console.log(val9)
+    const submittedMealLabel9 = document.createElement('label')
+    submittedMealLabel9.setAttribute('for', val9)
+    submittedMealLabel9.textContent = val9
+    const submittedMeal9 = document.createElement('input')
+    submittedMeal9.setAttribute('type', 'radio')
+    submittedMeal9.setAttribute('name', val9)
+    submittedMeal9.setAttribute('value', val9)
+    submittedMeal9.textContent = val9
+    document.getElementById('meal-container').appendChild(submittedMeal9)
+    document.getElementById('meal-container').appendChild(submittedMealLabel9)
+
+    const val10 = document.getElementById('input-10').value
+    console.log(val10)
+    const submittedMealLabel10 = document.createElement('label')
+    submittedMealLabel10.setAttribute('for', val10)
+    submittedMealLabel10.textContent = val10
+    const submittedMeal10 = document.createElement('input')
+    submittedMeal10.setAttribute('type', 'radio')
+    submittedMeal10.setAttribute('name', val10)
+    submittedMeal10.setAttribute('value', val10)
+    submittedMeal10.textContent = val10
+    document.getElementById('meal-container').appendChild(submittedMeal10)
+    document.getElementById('meal-container').appendChild(submittedMealLabel10)
   })
 
   const submitDiv = document.createElement('div')
@@ -128,16 +245,12 @@ function addTimer () {
   var max = document.getElementById('max').value
   if (min.length == 0) min = 0
   if (amountOfPlayers <= 0) {
-    alert('ingen spillere')
     return 0
   } else if (max.length == 0) {
-    alert('Vennlist fyll inn en max verdi')
     return 0
   } else if (max < 0 || min < 0) {
-    alert('Ingen negative tall vennligst')
     return 0
   } else if (max < min) {
-    alert('Max må være større enn min')
     return 0
   } else {
     var rouletteContainer = document.createElement('div')

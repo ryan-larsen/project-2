@@ -284,8 +284,33 @@ body {
    
   }
   
-  .second-form{padding-bottom: 0;padding-top: 2;background: rgba(0, 0, 0, 0.6);padding-bottom: 300px;margin-top: 82px;padding-bottom: 300px;border-radius: 25px;padding-top: 23px;margin-top: 130px;}
+  .second-form{
+    float: left;
+    padding-bottom: 0;
+    padding-top: 2;
+    background: rgba(0, 0, 0, 0.6);
+    padding-bottom: 300px;
+    margin-top: 82px;
+    padding-bottom: 300px;
+    border-radius: 25px;
+    padding-top: 23px;
+    margin-top: 130px;
+    width: 50%;
+  }
   
+  .third-form {
+    float: left;
+    padding-top: 2;
+    background: rgba(0, 0, 0, 0.6);
+    padding-bottom: 300px;
+    margin-top: 82px;
+    padding-bottom: 300px;
+    border-radius: 25px;
+    padding-top: 23px;
+    margin-top: 130px;
+    width: 50%;
+  }
+
   .winner{
     background-color: darkorange !important;
     padding: 10px;
