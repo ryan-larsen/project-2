@@ -25,45 +25,61 @@
 		var colors= ['FF450', '#ee5c1f', '#f37e22', '#f4ac23'];
     var width = 80;
 		var bets = [];
+		let count = 0
+			count = count + 1
     function play () {
 		event.preventDefault()
 			var offset = rand(0, amountOfBoxes*140-180)+180;
 			document.getElementById("fillMeUpDaddy").style.left = -(offset-180) + "px";
 			let chosenPlayer = document.createElement("div")
 			chosenPlayer.className = "winner"
+
+			
+
 			let playerInput = document.createElement("input")
+			playerInput.setAttribute('id', "input-"+count++)
 			
 			let inputDiv = document.createElement("div")
 			inputDiv.className = "winnerInput"
 
 			inputDiv.appendChild(playerInput)
-
-
-
-			let winnerSubmit = document.createElement("button")
-			winnerSubmit.appendChild(inputDiv)
-			winnerSubmit.id = "winnerSubmit"
-			winnerSubmit.innerHTML = "Submit" 
-			winnerSubmit.addEventListener('click', function (event){
-				event.preventDefault()
-				let submittedMeal = document.createElement("p") 
-				submittedMeal.innerText = this.parentNode.previousSibling.childNodes[0].value
-
-				
-
-				//add submitted meal to the div tag thats under the submit button
-			})
-			let submitDiv = document.createElement("div")
-			submitDiv.className = "winnerSubmit"
-			submitDiv.appendChild(winnerSubmit)
+						
 			
 			// playerInput.innerHTML = "Enter Your Meal Here"
 			let winnerDiv = document.createElement("div")
 			winnerDiv.className = "row winnerRow"
 
-			let meal = document.createElement("div")
+			let meal = document.createElement("h1")
 			meal.className = "meal"
 
+			let winnerSubmit = document.createElement("button")
+			winnerSubmit.appendChild(inputDiv)
+			winnerSubmit.id = "winnerSubmit"
+			winnerSubmit.innerHTML = "Submit" 
+			
+			winnerSubmit.addEventListener('click', function (event){
+				event.preventDefault()
+				
+				const val = document.querySelector('#playerInput').value
+				 console.log(val)
+
+				let submittedMeal = document.createElement("p")
+				submittedMeal.id = "submittedMeal"
+				submittedMeal.textContent = val
+				
+				document.getElementById("title").appendChild(submittedMeal)
+
+
+				// submittedMeal.appendchild(val)
+
+				// meal.appendChild(submittedMeal.innerText)
+
+				//add submitted meal to the div tag thats under the submit button
+			})
+
+			let submitDiv = document.createElement("div")
+			submitDiv.className = "winnerSubmit"
+			submitDiv.appendChild(winnerSubmit)
 
 			// let secondForm = document.createElement("div")
 			// secondForm.className ="secondForm"
@@ -198,12 +214,12 @@
 			</div>
 			*/
 		}
-		function removeName(playerToRemove){
-				bets[playerToRemove] = 0;
-				document.getElementById("n"+playerToRemove).remove();
-				amountOfPlayers--;
-				refreshRoulette();
-		}
+		// function removeName(playerToRemove){
+		// 		bets[playerToRemove] = 0;
+		// 		document.getElementById("n"+playerToRemove).remove();
+		// 		amountOfPlayers--;
+		// 		refreshRoulette();
+		// }
 		function clearAll(winnerToClear){
 			if(winnerToClear == -1){
 				document.getElementById("winners").innerHTML = "";

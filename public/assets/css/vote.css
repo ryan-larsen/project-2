@@ -134,6 +134,7 @@ li, .winners > div {
   height: 100px;
   left: 180px;
   z-index: 1;
+  border-radius: 25px;
 }
 /* Reset */
 button {
@@ -284,7 +285,7 @@ margin-left: 50px
  
 }
 
-.second-form{padding-bottom: 0;padding-top: 2;background: rgba(0, 0, 0, 0.6);padding-bottom: 300px;margin-top: 82px;padding-bottom: 300px;border-radius: 25px;padding-top: 23px;margin-top: 130px;}
+.second-form{float: left;width: 45%;padding-bottom: 0;padding-top: 2;background: rgba(0, 0, 0, 0.6);padding-bottom: 300px;margin-top: 82px;padding-bottom: 300px;border-radius: 25px;padding-top: 23px;margin-top: 130px;}
 
 .winner{
   background-color: darkorange !important;
@@ -307,4 +308,19 @@ font-size: 20px;
 padding-left: 10px
 
 }
+
+
+.third-form{
+  padding-bottom: 0;
+  padding-top: 2;
+  background: rgba(0, 0, 0, 0.6);
+  padding-bottom: 300px;
+  margin-top: 82px;
+  padding-bottom: 300px;
+  border-radius: 25px;
+  padding-top: 23px;
+  margin-top: 130px;
+  width: 45%;
+  float: left;
+  }
 
