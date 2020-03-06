@@ -28,26 +28,37 @@ var width = 80
 var bets = []
 function play () {
   event.preventDefault()
+  let count = 0
+  count++
   var offset = rand(0, amountOfBoxes * 140 - 180) + 180
   document.getElementById('fillMeUpDaddy').style.left = -(offset - 180) + 'px'
   const chosenPlayer = document.createElement('div')
   chosenPlayer.className = 'winner'
   const playerInput = document.createElement('input')
-  playerInput.setAttribute('name', randomPlayerName)
+  playerInput.setAttribute('type', 'text')
+  playerInput.setAttribute('name', 'textbox' + count)
   playerInput.setAttribute('class', 'playerInput')
+
+  // /* In your function */
+  // // create a textbox dynamically
+  // var eleText = document.createElement('input')
+  // eleText.setAttribute('type', 'text')
+  // eleText.setAttribute('name', 'textbox' + count)
+  // eleText.setAttribute('id', 'textbox' + textboxCount)
+  // textboxCount += 1 //Increment the count
 
   const inputDiv = document.createElement('div')
   inputDiv.className = 'winnerInput'
   inputDiv.appendChild(playerInput)
 
   // playerInput.innerHTML = "Enter Your Meal Here"
-  const winnerDiv = document.createElement('div')
+  const winnerDiv = document.createElement('form')
   winnerDiv.className = 'row winnerRow'
   const meal = document.createElement('form')
   meal.className = 'meal'
   const winnerSubmit = document.createElement('button')
   winnerSubmit.appendChild(inputDiv)
-  winnerSubmit.id = 'playerInput.value'
+  winnerSubmit.id = playerInput.val
   winnerSubmit.innerHTML = 'Submit'
 
   winnerSubmit.addEventListener('click', function (event) {
@@ -216,7 +227,7 @@ function addName () {
   var node = document.createElement('LI')
   var name = document.getElementById('inputName').value
   document.getElementById('inputName').value = ''
-  if (name != '') {
+  if (name !== '') {
     var textnode = document.createTextNode(name)
     const color = colors[rand(0, colors.length - 1)]
     node.style.backgroundColor = color
@@ -236,6 +247,7 @@ function addName () {
 }
 var amountOfPlayers = 0
 function refreshRoulette () {
+  event.preventDefault()
   const roulette = document.getElementById('fillMeUpDaddy')
   roulette.innerHTML = ''
   order = []
