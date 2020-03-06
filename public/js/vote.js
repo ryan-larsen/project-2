@@ -37,17 +37,19 @@
 			
 
 			let playerInput = document.createElement("input")
-			playerInput.setAttribute('id', "input-"+count++)
+			playerInput.id = "playerInput"
+			playerInput.className = "playerInput"
 			
+
 			let inputDiv = document.createElement("div")
+			inputDiv.setAttribute("id", "inputDiv"+count++)
 			inputDiv.className = "winnerInput"
 
 			inputDiv.appendChild(playerInput)
 						
 			
-			// playerInput.innerHTML = "Enter Your Meal Here"
-			let winnerDiv = document.createElement("div")
-			winnerDiv.className = "row winnerRow"
+			let winnerDiv = document.createElement("form")
+			winnerDiv.setAttribute("class", "winnerRow")
 
 			let meal = document.createElement("h1")
 			meal.className = "meal"
@@ -60,7 +62,7 @@
 			winnerSubmit.addEventListener('click', function (event){
 				event.preventDefault()
 				
-				const val = document.querySelector('#playerInput').value
+				const val = document.getElementById("playerInput").value
 				 console.log(val)
 
 				let submittedMeal = document.createElement("p")
