@@ -1,11 +1,10 @@
-
 $(document).ready(function () {
   // Getting references to our form and input
   const signUpForm = $('form.signup-form')
   const emailInput = $('input#email-input')
   const passwordInput = $('input#password-input')
   const usernameInput = $('input#username-input')
-  const avatarSelect = $('#myDropdown')
+  const avatarSelect = $('select#myDropdown')
   
   
   
@@ -107,7 +106,7 @@ $('#myDropdown').ddslick({
   imagePosition: "left",
   selectText: "Select your favorite avatar",
   onSelected: function (data) {
-      console.log(data.imageSrc);
+      console.log(data);
   }
 })
 
@@ -115,4 +114,4 @@ $('#myDropdown').ddslick({
 //  context: document
 //    images
 //      0: img.dd-selected-image
-//        src: "image link"
+//        src: "image link" 
