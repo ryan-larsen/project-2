@@ -1,8 +1,26 @@
 // Requiring necessary npm packages
 const express = require('express')
 const session = require('express-session')
+const path = require('path');
+const bodyParser = require('body-parser');
+const cors = require('cors');
 // Requiring passport as we've configured it
 const passport = require('./config/passport')
+
+// DB Config
+require('./config/db');
+const app = express();
+const poll = require('./routes/poll');
+// Set public folder
+app.use(express.static(path.join(__dirname, 'public')));
+
+// Body parser middleware
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+
+// Enable CORS
+app.use(cors());
+app.use('/poll', poll);
 
 // Setting up port and requiring models for syncing
 const PORT = process.env.PORT || 3000
