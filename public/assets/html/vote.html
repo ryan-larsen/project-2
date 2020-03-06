@@ -3,7 +3,10 @@
 
 <head>
 	<title>Roulette</title>
-	<link rel="stylesheet" type="text/css" href="../css/vote.css">
+	<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
+	<link rel="stylesheet" type="text/css" href="../../assets/css/vote.css">
+	<link href="https://fonts.googleapis.com/css?family=Knewave|Trade+Winds&display=swap" rel="stylesheet">
+
 </head>
 
 <body onload="init()">
@@ -27,7 +30,7 @@
 			<div id="fillMeUpDaddy" class="roulette">
 			</div>
 		</div>
-		<br><br><br><br><br><br><br><br>
+		<br><br><br><br><br><br>
 		<center>
 			<div>
 				<button id="startButton" onclick="play()">Pick Chef</button>
@@ -36,12 +39,67 @@
 		<br><br>
 		<div>
 			<center>
-				<button onclick="clearAll(-1)">Clear all</button>
+				<button class="clearButton" onclick="clearAll(-1)">Clear all</button>
 			</center>
 		</div>
-		<div id="winners" class="winners"></div>
+
+		<div class=form-container>
+			<div class="second-form">
+				<div class=" generatedWinners" id="generatedWinners" placeholder="Enter Meal"></div>
+			</div>
+		</div>
+		<div class="third-form"></div>
+		<div class="submittedMeals" id=" submittedMeals">
+			<h1 id="title"></h1>
+
+			<form class="vote-form" id="vote-form">
+				<div>
+
+					<input type="radio" name="os" id="windows" value="Windows">
+					<label for="windows">Windows</label>
+
+				</div>
+
+				<div>
+					<input type="radio" name="os" id="macos" value="MacOS">
+					<label for="macos">MacOS</label>
+
+
+				</div>
+
+				<div>
+					<input type="radio" name="os" id="linux" value="Linux">
+					<label for="linux">Linux Distro</label>
+
+				</div>
+
+				<div>
+					<input type="radio" name="os" id="other" value="Other">
+					<label for="other">Something else </label>
+
+				</div>
+
+
+				<input type="submit" value="Vote" class="btn">
+			</form>
+
+			<br>
+			<br>
+
+			<h5 style="text-align: center" id="chartTitle"></h5>
+			<div id="chartContainer" style="height: 300px;width:100%"></div>
+		</div>
+
+		</div>
+		</div>
+		</div>
 	</form>
 
+	<script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/pusher/4.2.2/pusher.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/canvasjs/1.7.0/canvasjs.min.js"></script>
 	<script src="../../js/vote.js"></script>
 </body>
 

@@ -1,12 +1,13 @@
 var amountOfBoxes = 100
+const randomPlayerName = document.querySelector('.winner')
 var order = []
 function init () {
   event.preventDefault()
   const roulette = document.getElementById('fillMeUpDaddy')
   roulette.innerHTML = ''
   const tempBets = [
-    ['chef1', 'white'],
-    ['chef2', 'white']
+    ['chef1', 'orangered'],
+    ['chef2', 'orangered']
   ]
   for (var i = 0; i < amountOfBoxes; i++) {
     var randomPlayer = rand(0, tempBets.length)
@@ -19,14 +20,10 @@ function init () {
   }
 }
 function rand (min, max) {
+  event.preventDefault()
   return Math.floor(Math.random() * (max - min)) + min
 }
-var colors = ['aqua', 'fuchsia', 'gray', 'green',
-  'lime', 'maroon', 'olive', 'orange', 'purple', 'red',
-  'silver', 'teal', 'white', 'yellow', '#e6194b', '#3cb44b', '#ffe119',
-  '#4363d8', '#f58231', '#911eb4', '#46f0f0', '#f032e6', '#bcf60c',
-  '#fabebe', '#008080', '#e6beff', '#9a6324', '#fffac8', '#800000',
-  '#aaffc3', '#808000', '#ffd8b1', '#808080', '#ffffff']
+var colors = ['FF450', '#ee5c1f', '#f37e22', '#f4ac23']
 var width = 80
 var bets = []
 function play () {
@@ -34,10 +31,61 @@ function play () {
   var offset = rand(0, amountOfBoxes * 140 - 180) + 180
   document.getElementById('fillMeUpDaddy').style.left = -(offset - 180) + 'px'
   const chosenPlayer = document.createElement('div')
+  chosenPlayer.className = 'winner'
+  const playerInput = document.createElement('input')
+  playerInput.setAttribute('name', randomPlayerName)
+  playerInput.setAttribute('class', 'playerInput')
+
+  const inputDiv = document.createElement('div')
+  inputDiv.className = 'winnerInput'
+  inputDiv.appendChild(playerInput)
+
+  // playerInput.innerHTML = "Enter Your Meal Here"
+  const winnerDiv = document.createElement('div')
+  winnerDiv.className = 'row winnerRow'
+  const meal = document.createElement('form')
+  meal.className = 'meal'
+  const winnerSubmit = document.createElement('button')
+  winnerSubmit.appendChild(inputDiv)
+  winnerSubmit.id = 'playerInput.value'
+  winnerSubmit.innerHTML = 'Submit'
+
+  winnerSubmit.addEventListener('click', function (event) {
+    event.preventDefault()
+
+    const val = document.querySelector('.playerInput').value
+    console.log(val)
+    const submittedMealLabel = document.createElement('label')
+    submittedMealLabel.setAttribute('for', val)
+    submittedMealLabel.textContent = val
+    const submittedMeal = document.createElement('input')
+    submittedMeal.setAttribute('type', 'radio')
+    submittedMeal.setAttribute('name', val)
+    submittedMeal.setAttribute('value', val)
+    submittedMeal.textContent = val
+    document.getElementById('title').appendChild(submittedMeal)
+    document.getElementById('title').appendChild(submittedMealLabel)
+
+    // submittedMeal.appendchild(val)
+    // meal.appendChild(submittedMeal.innerText)
+    // add submitted meal to the div tag thats under the submit button
+  })
+  const submitDiv = document.createElement('div')
+  submitDiv.className = 'winnerSubmit'
+  submitDiv.appendChild(winnerSubmit)
+  // let secondForm = document.createElement("div")
+  // secondForm.className ="secondForm"
+
+  playerInput.innerHTML = bets[order[parseInt(offset / 140)]][0]
   chosenPlayer.style.backgroundColor = bets[order[parseInt(offset / 140)]][1]
   chosenPlayer.innerHTML = bets[order[parseInt(offset / 140)]][0]
   setTimeout(function () {
-    document.getElementById('winners').appendChild(chosenPlayer)
+    // document.querySelector("secondForm").appendChild(secondForm)
+    winnerDiv.appendChild(chosenPlayer)
+    winnerDiv.appendChild(inputDiv)
+    winnerDiv.appendChild(submitDiv)
+    const generatedWinners = document.getElementById('generatedWinners')
+    generatedWinners.appendChild(winnerDiv)
     document.getElementById('fillMeUpDaddy').style.transitionDuration = '0s'
     document.getElementById('fillMeUpDaddy').style.left = '0px'
     setTimeout(function () {
@@ -49,6 +97,9 @@ function playTimer (whatTimer, min, max) {
   event.preventDefault()
   var time = rand(min * 60000, max * 60000)
   setTimeout(function () {
+    // add sound if you want
+    // var audio = new Audio('spin.mp3');
+    // audio.play();
     var offset = rand(0, amountOfBoxes * 140 - 180) + 180
     document.getElementById('r' + whatTimer).style.left = -(offset - 180) + 'px'
     const chosenPlayer = document.createElement('div')
@@ -71,7 +122,7 @@ var timerOrder = []
 function addTimer () {
   var min = document.getElementById('min').value
   var max = document.getElementById('max').value
-  if (min.length === 0) min = 0
+  if (min.length == 0) min = 0
   if (amountOfPlayers <= 0) {
     alert('ingen spillere')
     return 0
@@ -95,7 +146,7 @@ function addTimer () {
     roulette.id = 'r' + amountOfTimers
     timerBets[amountOfTimers] = []
     for (var i = 0; i < bets.length; i++) {
-      if (bets[i] !== 0) {
+      if (bets[i] != 0) {
         timerBets[amountOfTimers].push([bets[i][0], bets[i][1]])
       }
     }
@@ -120,7 +171,7 @@ function addTimer () {
     amountOfTimers++
     var removeAllButton = document.createElement('button')
     var name = document.getElementById('timerName').value
-    if (name === '') {
+    if (name == '') {
       name = 'Timer nr.' + amountOfTimers
     }
     removeAllButton.innerHTML = 'Clear ' + name
@@ -137,16 +188,23 @@ function addTimer () {
     document.getElementById('timerContainer').appendChild(removeAllButton)
     playTimer(amountOfTimers - 1, min, max)
   }
+  /*
+            <div class="rouletteContainer">
+                <div class="line">
+                </div>
+                <div id="fillMeUpDaddy" class="roulette">
+                </div>
+            </div>
+            */
 }
-function removeName (playerToRemove) {
-  bets[playerToRemove] = 0
-  document.getElementById('n' + playerToRemove).remove()
-  amountOfPlayers--
-  refreshRoulette()
-}
+// function removeName(playerToRemove){
+//      bets[playerToRemove] = 0;
+//      document.getElementById("n"+playerToRemove).remove();
+//      amountOfPlayers--;
+//      refreshRoulette();
+// }
 function clearAll (winnerToClear) {
-  event.preventDefault()
-  if (winnerToClear === -1) {
+  if (winnerToClear == -1) {
     document.getElementById('winners').innerHTML = ''
     return true
   } else {
@@ -186,7 +244,7 @@ function refreshRoulette () {
   }
   for (var i = 0; i < amountOfBoxes; i++) {
     var randomPlayer = rand(0, bets.length)
-    while (bets[randomPlayer] === 0) {
+    while (bets[randomPlayer] == 0) {
       randomPlayer = rand(0, bets.length)
     }
     order.push(randomPlayer)
@@ -199,8 +257,7 @@ function refreshRoulette () {
   }
 }
 document.getElementById('inputName').addEventListener('keyup', function (event) {
-  event.preventDefault()
-  if (event.keyCode === 13) {
+  if (event.keyCode == 13) {
     document.getElementById('addButton').click()
   }
 })
