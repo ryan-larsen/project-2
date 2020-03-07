@@ -1,0 +1,9 @@
+{
+    "development": {
+      "username": "root",
+      "password": "Penguinpoo!7",
+      "database": "userdb",
+      "host": "localhost",
+      "dialect": "mysql"
+    }
+  }

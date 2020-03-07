@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Roulette</title>
+	<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../assets/css/vote.css">
+	<link href="https://fonts.googleapis.com/css?family=Knewave|Trade+Winds&display=swap" rel="stylesheet">
+</head>
+<body onload="init()">
+	<form class="vote-form" id="vote-form">
+		<center>
+			<div>
+				<h1 class="shotterudTitle">Chefs</h1>
+			</div>
+			<div>
+				<input id="inputName" placeholder="Name">
+				<button id="addButton" onclick="addName()">Add Chef</button>
+			</div>
+			<div>
+				<ul id="names">
+				</ul>
+			</div>
+		</center>
+		<div class="rouletteContainer">
+			<div class="line">
+			</div>
+			<div id="fillMeUpDaddy" class="roulette">
+			</div>
+		</div>
+		<br><br><br><br><br><br>
+		<center>
+			<div>
+				<button id="startButton" onclick="play()">Pick Chef</button>
+			</div>
+		</center>
+		<br><br>
+		<div>
+			<center>
+				<button class="clearButton" onclick="clearAll(-1)">Clear all</button>
+			</center>
+		</div>
+		<div class="second-form">
+			<div class=" generatedWinners" id="generatedWinners" placeholder="Enter Meal"></div>
+		
+		</div>
+		<div class="submittedMeals" id=" submittedMeals">
+		</div>				<div id="meal-container"></div>
+	
+					<container class = "radio-container">
+						<p>Vote for your favorite meal</p>
+								<div>
+									<input type="radio" name="os" id="windows" value="Windows">
+									<label for="windows">Mac n Cheese</label>
+								</div>
+								<div>
+									<input type="radio" name="os" id="tacos" value="MacOS">
+									<label for="tacos">Tacos</label>
+								</div>
+								<div>
+									<input type="radio" name="os" id="linux" value="Linux">
+									<label for="linux">Lasagna</label>
+								</div>
+								<div>
+									<input type="radio" name="os" id="other" value="Other">
+									<label for="other">Other</label>
+								</div>
+								<input type="submit" value="Vote" class="btn">
+			</div>
+				</container>
+				<div>
+				<h1>Food Fight Votes</h1>
+						</form>
+						<div class="column chartContainer"> 
+								<h5 style="text-align: center" id="chartTitle"></h5>
+								<div id="chartContainer"></div>
+						</div>
+					</div>
+				</div>	
+			</div>
+			</div>
+	</form>
+<script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pusher/4.2.2/pusher.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/canvasjs/1.7.0/canvasjs.min.js"></script>
+<script src="main.js"></script>
+<link rel="stylesheet" type="text/css" href="../assets/css/vote.css">
+
+<script src="../../js/vote.js"></script>
+</body>
+
+</html>

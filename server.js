@@ -1,29 +1,56 @@
+// Requiring necessary npm packages
 const express = require('express')
 const session = require('express-session')
+const path = require('path');
+const bodyParser = require('body-parser');
+const cors = require('cors');
+const passport = require('passport')
 // Requiring passport as we've configured it
-const passport = require('./config/passport')
+console.log('STAGE 0')
 
+// const passport = require('./config/passport')
+// DB Config
+require('./config/db');
+const app = express();
+const poll = require('./routes/poll');
+// Set public folder
+app.use(express.static(path.join(__dirname, 'public')));
+
+console.log('STAGE 1')
+
+// Body parser middleware
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+
+// Enable CORS
+app.use(cors());
+app.use('/poll', poll);
+
+console.log('STAGE 2')
 // Setting up port and requiring models for syncing
-const PORT = process.env.PORT || 8080
+const PORT = process.env.PORT || 3000
 const db = require('./models')
 
-// Creating express app and configuring middleware needed for authentication
-const app = express()
+// Create express app and configure middleware needed for authentication
+console.log('STAGE 3')
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 app.use(express.static('public'))
-// We need to use sessions to keep track of our user's login status
+
+// Use sessions to keep track of the users login status
 app.use(session({ secret: 'keyboard cat', resave: true, saveUninitialized: true }))
 app.use(passport.initialize())
 app.use(passport.session())
+console.log('STAGE 4')
 
-// Requiring our routes
+// Requiring routes
 require('./routes/html-routes.js')(app)
 require('./routes/api-routes.js')(app)
+console.log('STAGE 5')
 
-// Syncing our database and logging a message to the user upon success
+// Syncing database and logging message
 db.sequelize.sync().then(function () {
   app.listen(PORT, function () {
-    console.log('==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.', PORT, PORT)
+    console.log('App listening on PORT ', PORT)
   })
-})
+});
