@@ -63,6 +63,7 @@
 				event.preventDefault()
 				
 				const val = document.getElementById("playerInput").value
+				
 				 console.log(val)
 
 				let submittedMeal = document.createElement("p")
