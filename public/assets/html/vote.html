@@ -4,13 +4,14 @@
 <head>
 	<title>Roulette</title>
 	<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
-	<link rel="stylesheet" type="text/css" href="../../assets/css/vote.css">
-	<link href="https://fonts.googleapis.com/css?family=Knewave|Trade+Winds&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 
+	<link rel="stylesheet" type="text/css" href="../assets/css/vote.css">
+	<link href="https://fonts.googleapis.com/css?family=Knewave|Trade+Winds&display=swap" rel="stylesheet">
 </head>
 
 <body onload="init()">
-	<form class="vote-form">
+	<form class="vote-form" id="vote-form">
 		<center>
 			<div>
 				<h1 class="shotterudTitle">Chefs</h1>
@@ -42,35 +43,25 @@
 				<button class="clearButton" onclick="clearAll(-1)">Clear all</button>
 			</center>
 		</div>
-
-		<div class=form-container>
-			<div class="second-form">
-				<div class=" generatedWinners" id="generatedWinners" placeholder="Enter Meal"></div>
-				<div class="submittedMeals" id=" submittedMeals">
-					<div id="winnerSubmit">
-						<button>Submit</button>
-					</div>
-				</div>
-			</div>
-
-
-			<div class="third-form">
-				<div id="meal-container"></div>
-			</div>
+		<div class="second-form">
+			<div class=" generatedWinners" id="generatedWinners" placeholder="Enter Meal"></div>
+		</div>
+		</div>
+		<div class="submittedMeals" id=" submittedMeals">
+		</div>
+		<div class="third-form">
+			<div id="meal-container"></div>
 		</div>
 
+		<div class="container chartContainer">
+			<canvas id="myChart" width="400" height="400"></canvas>
+		</div>
 
-
-
-
-
-		
-			<script src="http://code.jquery.com/jquery-3.3.1.js"
-				integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-			<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-			<script src="https://cdnjs.cloudflare.com/ajax/libs/pusher/4.2.2/pusher.min.js"></script>
-			<script src="https://cdnjs.cloudflare.com/ajax/libs/canvasjs/1.7.0/canvasjs.min.js"></script>
-			<script src="../../js/vote.js"></script>
+	</form>
+	<script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
+	<script src="../../js/vote.js"></script>
 </body>
 
 </html>

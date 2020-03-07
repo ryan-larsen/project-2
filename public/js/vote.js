@@ -1,5 +1,6 @@
 var amountOfBoxes = 100
 var order = []
+
 function init () {
   event.preventDefault()
   const roulette = document.getElementById('fillMeUpDaddy')
@@ -18,6 +19,7 @@ function init () {
     roulette.appendChild(node)
   }
 }
+
 function rand (min, max) {
   event.preventDefault()
   return Math.floor(Math.random() * (max - min)) + min
@@ -27,6 +29,7 @@ var width = 80
 var bets = []
 let count = 0
 count = count + 1
+
 function play () {
   event.preventDefault()
   var offset = rand(0, amountOfBoxes * 140 - 180) + 180
@@ -214,6 +217,7 @@ function play () {
     }, 50)
   }, 5500)
 }
+
 function playTimer (whatTimer, min, max) {
   event.preventDefault()
   var time = rand(min * 60000, max * 60000)
@@ -240,6 +244,7 @@ function playTimer (whatTimer, min, max) {
 var amountOfTimers = 0
 var timerBets = []
 var timerOrder = []
+
 function addTimer () {
   var min = document.getElementById('min').value
   var max = document.getElementById('max').value
@@ -315,6 +320,7 @@ function clearAll (winnerToClear) {
     document.getElementById('w' + winnerToClear).innerHTML = ''
   }
 }
+
 function addName () {
   event.preventDefault()
   var node = document.createElement('LI')
@@ -339,6 +345,7 @@ function addName () {
   }
 }
 var amountOfPlayers = 0
+
 function refreshRoulette () {
   const roulette = document.getElementById('fillMeUpDaddy')
   roulette.innerHTML = ''
@@ -361,7 +368,46 @@ function refreshRoulette () {
   }
 }
 document.getElementById('inputName').addEventListener('keyup', function (event) {
-  if (event.keyCode == 13) {
+  if (event.keyCode === 13) {
     document.getElementById('addButton').click()
+  }
+})
+
+// Voting Chart JS
+var ctx = document.getElementById('myChart').getContext('2d')
+var myChart = new Chart(ctx, {
+  type: 'bar',
+  data: {
+    labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+    datasets: [{
+      label: '# of Votes',
+      data: [12, 19, 3, 5, 2, 3],
+      backgroundColor: [
+        'rgba(255, 99, 132)',
+        'rgba(54, 162, 235)',
+        'rgba(255, 206, 86)',
+        'rgba(75, 192, 192)',
+        'rgba(153, 102, 255)',
+        'rgba(255, 159, 64)'
+      ],
+      borderColor: [
+        'rgba(255, 99, 132, 1)',
+        'rgba(54, 162, 235, 1)',
+        'rgba(255, 206, 86, 1)',
+        'rgba(75, 192, 192, 1)',
+        'rgba(153, 102, 255, 1)',
+        'rgba(255, 159, 64, 1)'
+      ],
+      borderWidth: 1
+    }]
+  },
+  options: {
+    scales: {
+      yAxes: [{
+        ticks: {
+          beginAtZero: true
+        }
+      }]
+    }
   }
 })
