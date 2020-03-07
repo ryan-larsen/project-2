@@ -30,9 +30,9 @@ fetch("http://localhost:3000/poll")
             {}
         );
         let dataPoints = [
-            { label: 'Windows', y: voteCounts.Windows },
-            { label: 'MacOS', y: voteCounts.MacOS },
-            { label: 'Linux', y: voteCounts.Linux },
+            { label: 'Mac n Cheese', y: voteCounts.Windows },
+            { label: 'Tacos', y: voteCounts.MacOS },
+            { label: 'Lasagna', y: voteCounts.Linux },
             { label: 'Other', y: voteCounts.Other }
         ];
         const chartContainer = document.querySelector('#chartContainer');

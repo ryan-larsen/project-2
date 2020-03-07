@@ -190,7 +190,7 @@ button:hover{
 button:active {
   top: 0px;
   box-shadow: none !important;
-  background: orangered;
+  background: orangered !important;
   color: rgb(255, 246, 142)
 }
 .vote-form{
@@ -232,6 +232,10 @@ button{
 button#startButton{
 padding: 12px;
 margin-right: 110px
+}
+
+button#startButton:active {
+background-color:  rgb(255, 246, 142)!important;
 }
 
 button#addButton{
