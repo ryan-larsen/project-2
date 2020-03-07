@@ -18,8 +18,8 @@ const poll = require('./routes/poll')
 app.use(express.static(path.join(__dirname, 'public')))
 
 // MongoDb config
-const MONGODB_URI = process.env.MONGODB_URI
-mongoose.connect(MONGODB_URI)
+//const MONGODB_URI = process.env.MONGODB_URI
+//mongoose.connect(MONGODB_URI)
 
 console.log('STAGE 1')
 
