@@ -5,7 +5,7 @@ const path = require('path')
 const bodyParser = require('body-parser')
 const cors = require('cors')
 const passport = require('passport')
-const mongoose = require('mongoose')
+// const mongoose = require('mongoose')
 // Requiring passport as we've configured it
 console.log('STAGE 0')
 
@@ -18,8 +18,8 @@ const poll = require('./routes/poll')
 app.use(express.static(path.join(__dirname, 'public')))
 
 // MongoDb config
-const MONGODB_URI = process.env.MONGODB_URI
-mongoose.connect(MONGODB_URI)
+// const MONGODB_URI = process.env.MONGODB_URI
+// mongoose.connect(MONGODB_URI)
 
 console.log('STAGE 1')
 
