@@ -3,7 +3,7 @@ var event;
 form.addEventListener('submit', e=>{
     const choice = document.querySelector('input[name=os]:checked').value;
     const data = {os: choice};
-    fetch('http://localhost:3000/poll',{
+    fetch('http://localhost:3100/poll',{
         method: 'post',
         body: JSON.stringify(data),
         headers: new Headers({
@@ -13,27 +13,27 @@ form.addEventListener('submit', e=>{
     .catch(err => console.log(err));
     e.preventDefault();
 });
-fetch("http://localhost:3000/poll")
+fetch("http://localhost:3100/poll")
     .then(res => res.json())
     .then(data => {
         let votes = data.votes;
         let totalVotes = votes.length;
-        // document.querySelector('#chartTitle').textContent = `Total Votes: ${totalVotes}`;
+        document.querySelector('#chartTitle').textContent = `Total Votes: ${totalVotes}`;
         let voteCounts = {
-            Windows: 0,
-            MacOS: 0,
-            Linux: 0,
-            Other: 0
+            Steak: 0,
+            Shrimp: 0,
+            Chicken: 0,
+            Ribs: 0
         };
         voteCounts = votes.reduce((acc, vote) => (
             (acc[vote.os] = (acc[vote.os] || 0) + parseInt(vote.points)), acc),
             {}
         );
         let dataPoints = [
-            { label: 'Mac n Cheese', y: voteCounts.Windows },
-            { label: 'Tacos', y: voteCounts.MacOS },
-            { label: 'Lasagna', y: voteCounts.Linux },
-            { label: 'Other', y: voteCounts.Other }
+            { label: 'Steak', y: voteCounts.Steak },
+            { label: 'Shrimp', y: voteCounts.Shrimp },
+            { label: 'Chicken', y: voteCounts.Chicken},
+            { label: 'Ribs', y: voteCounts.Ribs }
         ];
         const chartContainer = document.querySelector('#chartContainer');
         if(chartContainer){
@@ -54,7 +54,7 @@ fetch("http://localhost:3000/poll")
             chart.render();
              // Enable pusher logging - don't include this in production
              //Pusher.logToConsole = true;
-             var pusher = new Pusher('bc00d346382b60f54c8e', {
+             var pusher = new Pusher('b1ebe92f7b945479d494', {
                cluster: 'us2',
                encrypted: true
              });

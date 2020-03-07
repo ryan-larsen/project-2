@@ -28,7 +28,7 @@ app.use('/poll', poll);
 
 console.log('STAGE 2')
 // Setting up port and requiring models for syncing
-const PORT = process.env.PORT || 3000
+const PORT = process.env.PORT || 3100
 const db = require('./models')
 
 // Create express app and configure middleware needed for authentication
