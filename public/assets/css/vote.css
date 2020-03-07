@@ -167,7 +167,7 @@ button {
   -ms-transition: all 0.2s ease;
   transition: all 0.2s ease;
   color: orangered;
-  margin-left: 25px;
+  margin-left: 31px;
   margin-bottom: -19px;
 }
 
@@ -197,7 +197,7 @@ button:active {
   background: rgba(0, 0, 0, 0.6);
   grid-row: 1 / span 1;
   width: 80%;
-  height: 587px;
+  height: 100%;
   margin: 2% auto;
   padding-bottom: 45px;
   position: relative;
@@ -269,16 +269,16 @@ color: orangered !important
     border-radius: 25px;
     border: solid 1px orangered;
     padding-left: 10px;
-    margin-top: 100px;
+    margin-top: 6px;
     width: 125px;
     height:  40px;
-    margin-left: 50px;
-    color: orangered
+    margin-left: 64px;
+    color: orangered;
 }
 
-.generatedWinners{margin-top: 0px;margin-left: 7%;}
+.generatedWinners{margin-top: 0px;margin-left: 7%; width: 25%;}
 
-#winnerSubmitButton{
+button#winnerSubmitButton{
 margin-right: 35px;
 padding: 0px;
 margin-bottom: 20px;
@@ -297,12 +297,12 @@ margin-left: 50px
 .winner{
   background-color: darkorange !important;
   padding: 10px;
-  width: 100px;
   text-align: center;
   border-radius: 25px;
-  margin-left: 20px;
-  margin-top: 25px;
+  margin-left: 66px;
+  margin-top: 24px;
   margin-bottom: 10px;
+  width: 132px;
 }
 
 div.winnerInput > input {
@@ -333,7 +333,58 @@ padding-left: 10px
 
 .chartContainer{
   width: 819px !important;
-    margin-top: 50px !important;
-    height: 400px !important;
-    margin-right: 236px !important;
+  margin-top: 214px !important;
+  height: 400px !important;
+  margin-right: 236px !important;
+}
+.radio-container{
+margin-left: 800px;
+margin-top: 100px;
+}
+
+.fav-meal{
+  color: orangered
+}
+
+label {
+  color: orangered
+}
+button#winnerSubmit{
+  margin-left: 77px
+}
+
+.radio-column{
+  position:absolute
+}
+
+.gen-winners-column{
+  margin-top: 77px;
+}
+
+.results{
+margin-left: 13%
+}
+
+.FFV{
+  text-align: center;
+  color: orangered;
+}
+
+.radio-submit{
+   display: inline-block;
+  top: 0;
+  font-size: 20px;
+  border-radius: 25px;
+  border-bottom: 1px solid orangered;
+  color: orangered;
+  background-color: rgb(255, 246, 142);
+  padding-bottom: 20px 
+}
+
+.canvasjs-chart-canvas{
+  border-radius: 25px;
+}
+
+h5#chartTitle{
+  color: orange
 }

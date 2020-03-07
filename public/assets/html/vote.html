@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>Roulette</title>
-	<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 
 	<link rel="stylesheet" type="text/css" href="../assets/css/vote.css">
@@ -41,40 +41,48 @@
 				<button class="clearButton" onclick="clearAll(-1)">Clear all</button>
 			</center>
 		</div>
-		<div class="second-form">
-			<div class=" generatedWinners" id="generatedWinners" placeholder="Enter Meal"></div>
-		
-		</div>
-		<div class="submittedMeals" id=" submittedMeals">
-		</div>				<div id="meal-container"></div>
-	
-					<container class = "radio-container">
-						<p>Vote for your favorite meal</p>
+
+			<div class = "row">
+				<div class = "gen-winners-column col-6-sml">
+					<div class=" generatedWinners" id="generatedWinners" placeholder="Enter Meal"></div>
+				</div>	
+				<div class = "radio-column col-6-sml" >
+					<div class = "radio-container">
+						<div class = "fav-meal">Vote for your favorite meal</div>
 								<div>
-									<input type="radio" name="os" id="windows" value="Windows">
-									<label for="windows">Mac n Cheese</label>
+									<input type="radio" name="os" id="steak" value="Steak">
+									<label for="steak">Steak</label>
 								</div>
 								<div>
-									<input type="radio" name="os" id="tacos" value="MacOS">
-									<label for="tacos">Tacos</label>
+									<input type="radio" name="os" id="chicken" value="Chicken">
+									<label for="chicken">Chicken</label>
 								</div>
 								<div>
-									<input type="radio" name="os" id="linux" value="Linux">
-									<label for="linux">Lasagna</label>
+									<input type="radio" name="os" id="shrimp" value="Shrimp">
+									<label for="shrimp">Shrimp</label>
 								</div>
 								<div>
-									<input type="radio" name="os" id="other" value="Other">
-									<label for="other">Other</label>
+									<input type="radio" name="os" id="ribs" value="Ribs">
+									<label for="ribs">Ribs</label>
 								</div>
-								<input type="submit" value="Vote" class="btn">
+								<input type="submit" value="Vote" class="btn radio-submit">
+					</div>
+				</div>
 			</div>
-				</container>
-				<div>
-				<h1>Food Fight Votes</h1>
+		
+		<div class="submittedMeals" id=" submittedMeals">
+		
+				
+				
 						</form>
-						<div class="column chartContainer"> 
-								<h5 style="text-align: center" id="chartTitle"></h5>
-								<div id="chartContainer"></div>
+						<div class = "row">
+							<div class = "results col-12-sml">
+								<div class="column chartContainer"> 
+										<h1 class = "FFV">Food Fight Votes</h1>
+												<h5 style="text-align: center" id="chartTitle"></h5>
+										<div id="chartContainer"></div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>	
