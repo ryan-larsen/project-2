@@ -58,7 +58,7 @@ function play () {
   winnerSubmit.addEventListener('click', function (event) {
     event.preventDefault()
 
-    const val = document.querySelectorAll('.playInput').value
+    const val = document.querySelector('.playInput').value
     console.log(val)
     const submittedMealLabel = document.createElement('label')
     submittedMealLabel.setAttribute('for', val)
