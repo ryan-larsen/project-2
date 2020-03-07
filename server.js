@@ -1,30 +1,30 @@
 // Requiring necessary npm packages
 const express = require('express')
 const session = require('express-session')
-const path = require('path');
-const bodyParser = require('body-parser');
-const cors = require('cors');
+const path = require('path')
+const bodyParser = require('body-parser')
+const cors = require('cors')
 const passport = require('passport')
 // Requiring passport as we've configured it
 console.log('STAGE 0')
 
 // const passport = require('./config/passport')
 // DB Config
-require('./config/db');
-const app = express();
-const poll = require('./routes/poll');
+require('./config/db')
+const app = express()
+const poll = require('./routes/poll')
 // Set public folder
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public')))
 
 console.log('STAGE 1')
 
 // Body parser middleware
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: false }))
 
 // Enable CORS
-app.use(cors());
-app.use('/poll', poll);
+app.use(cors())
+app.use('/poll', poll)
 
 console.log('STAGE 2')
 // Setting up port and requiring models for syncing
@@ -53,4 +53,4 @@ db.sequelize.sync().then(function () {
   app.listen(PORT, function () {
     console.log('App listening on PORT ', PORT)
   })
-});
+})
